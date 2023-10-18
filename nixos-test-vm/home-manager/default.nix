@@ -1,8 +1,16 @@
-{ config, pkgs, ... }:
-
+{ 
+  inputs,
+  outputs,
+  lib,
+  config, 
+  pkgs, 
+  hyprland,
+  ... }: 
 {
-  home.username = "cody";
-  home.homeDirectory = "/home/cody";
+  imports = [
+    inputs.hyprland.homeManagerModules.default
+    ./hyprland
+  ];
 
   # Git configuration
   programs.git = {
@@ -15,10 +23,14 @@
   home.packages = with pkgs; [
     # System info
     neofetch
+    # Browsers
+    librewolf
+    brave
     # Utilities
     eza 
     ripgrep
     fzf
+    tree
     # Networking
     socat
     nmap
@@ -32,6 +44,7 @@
     # Productivity
     glow
     btop
+    htop # temporary
     # Syscall monitoring
     lsof
     # System tools
