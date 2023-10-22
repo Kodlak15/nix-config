@@ -10,44 +10,29 @@
     enableNvidiaPatches = true;
     systemdIntegration = true;
     extraConfig = ''
-      # This is an example Hyprland config file.
-      #
-      # Refer to the wiki for more information.
-      
-      #
-      # Please note not all available settings / options are set here.
-      # For a full list, see the wiki
-      #
-      
-      # See https://wiki.hyprland.org/Configuring/Monitors/
-      # monitor=,preferred,auto,auto
-      # monitor=,highrr, auto, 1
-      # monitor=,highres, auto, 1
-      
-      ### Laptop ###
-      # Set resolution, position, scale
-      monitor=DP-1, 3840x2160@60.0, auto, 2
-      
-      # See https://wiki.hyprland.org/Configuring/Keywords/ for more
-      
-      # sets xwayland scale
+      # Set XWayland scale
       exec-once=xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
-      # toolkit-specific scale
+
+      # Get rid of default wallpaper
+      misc {
+        disable_hyprland_logo=1
+        disable_splash_rendering=1
+      }
+
+      # Toolkit-specific scale
       env = GDK_SCALE,2
       env = XCURSOR_SIZE,32
-      
-      # Execute your favorite apps at launch
-      exec-once = $HOME/bin/swww-daemon
-      exec-once = $HOME/bin/eww daemon
-      exec-once = $HOME/.config/eww/scripts/bars/default.sh --launch
-      exec-once = /usr/bin/gentoo-pipewire-launcher
-      exec-once = /usr/bin/spotifyd --config-path /home/cody/.config/spotifyd/spotifyd.toml --no-daemon
-      
-      # Source a file (multi-file configs)
-      # source = ~/.config/hypr/myColors.conf
-      
-      # Some default env vars.
-      env = XCURSOR_SIZE,24
+
+      # Environment variables
+      env = LIBVA_DRIVER_NAME,nvidia
+      env = GBM_BACKEND,nvidia-drm
+      env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+      env = WLR_NO_HARDWARE_CURSORS,1
+      env = XDG_SESSION_TYPE,wayland
+      env = XDG_CURRENT_DESKTOP,Hyprland
+      env = XDG_SESSION_DESKTOP,Hyprland
+      env = MOZ_ENABLE_WAYLAND,1
+      env = MOZ_DBUS_REMOTE,1
       
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
       input {
@@ -56,46 +41,31 @@
           kb_model =
           kb_options =
           kb_rules =
-      
           follow_mouse = 1
-      
           touchpad {
               natural_scroll = false
           }
-      
           sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
       }
       
       general {
-          # See https://wiki.hyprland.org/Configuring/Variables/ for more
-      
           gaps_in = 2.5
           gaps_out = 5
           border_size = 2
-          col.active_border = rgba(7dcfffff) rgba(7dcfffff) 90deg # cyan
-          # col.active_border = rgba(f7768eff) rgba(f7768eff) 90deg # red
-          # col.active_border = rgba(e0af68ff) rgba(e0af68ff) 90deg # yellow
-      
+          col.active_border = rgba(7dcfffff) rgba(7dcfffff) 90deg
           col.inactive_border = rgba(59595900)
-      
           layout = dwindle
       }
       
       decoration {
-          # See https://wiki.hyprland.org/Configuring/Variables/ for more
-      
           rounding = 10
-      
           blur {
             enabled = false
           }
-      
           drop_shadow = false
           shadow_range = 4
           shadow_render_power = 3
           col.shadow = rgba(1a1a1aee)
-      
-          # opacity
           fullscreen_opacity = 1.0
           active_opacity = 0.90
           inactive_opacity = 0.90
@@ -103,11 +73,7 @@
       
       animations {
           enabled = true
-      
-          # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
-      
           bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-      
           animation = windows, 1, 8, myBezier, slide
           animation = windowsOut, 1, 8, myBezier, slide
           animation = border, 1, 10, default
@@ -117,52 +83,45 @@
       }
       
       dwindle {
-          # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
           pseudotile = true # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
           preserve_split = true # you probably want this
       }
       
       master {
-          # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
           new_is_master = true
       }
       
       gestures {
-          # See https://wiki.hyprland.org/Configuring/Variables/ for more
           workspace_swipe = false
       }
       
-      # Example per-device config
-      # See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
       device:epic-mouse-v1 {
           sensitivity = -0.5
       }
       
-      # Example windowrule v1
-      # windowrule = float, ^(kitty)$
-      # Example windowrule v2
-      # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-      # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-      windowrule = opacity 1.0 override 1.0 override, ^(firefox)$ # Remove opacity for firefox
-      windowrule = opacity 1.0 override 1.0 override, ^(librewolf)$ # Remove opacity for librewolf 
-      windowrule = opacity 1.0 override 1.0 override, ^(brave-browser)$ # Remove opacity for brave
-      windowrule = opacity 1.0 override 1.0 override, ^(virt-manager)$ # Remove opacity for vms
-      windowrule = opacity 1.0 override 1.0 override, ^(thunar)$ # Remove opacity for vms
+      windowrule = opacity 1.0 override 1.0 override, ^(firefox)$         # Remove opacity for firefox
+      windowrule = opacity 1.0 override 1.0 override, ^(librewolf)$       # Remove opacity for librewolf 
+      windowrule = opacity 1.0 override 1.0 override, ^(brave-browser)$   # Remove opacity for brave
+      windowrule = opacity 1.0 override 1.0 override, ^(virt-manager)$    # Remove opacity for vms
+      windowrule = opacity 1.0 override 1.0 override, ^(thunar)$          # Remove opacity for thunar
       
-      
-      # See https://wiki.hyprland.org/Configuring/Keywords/ for more
+      # Set mod keys
       $mainMod = SUPER
       $altMod = ALT_L
       
-      # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+      # Set key bindings
       bind = $mainMod, Return, exec, alacritty
       bind = $mainMod, Q, killactive,
       bind = $mainMod, Delete, killactive,
       bind = $mainMod, M, exit,
-      bind = $mainMod, E, exec, dolphin
       bind = $mainMod, V, togglefloating,
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
+      bind = $mainMod, F, fullscreen
+      bind = $mainMod, b, exec, librewolf
+      bind = $mainMod, t, exec, thunar 
+      bind = $mainMod, e, exec, /usr/bin/alacritty -e $SHELL -c 'nvim && exec $SHELL' & 2> ./logs/nvim
+      bind = $mainMod $altMod, v, exec, virt-manager 
       
       # Move focus with mainMod + arrow keys
       bind = $mainMod, left, movefocus, l
@@ -198,7 +157,7 @@
       bind = $mainMod, mouse_down, workspace, e+1
       bind = $mainMod, mouse_up, workspace, e-1
       
-      # Move/resize windows with mainMod + LMB/RMB and dragging
+      # Move/resize windows with altMod + LMB/RMB and dragging
       bindm = $altMod, mouse:272, movewindow
       bindm = $altMod, mouse:273, resizewindow
       
@@ -207,28 +166,7 @@
       bind = , F2, exec, wpctl set-volume 45 0.02-
       bind = , F3, exec, wpctl set-volume 45 0.02+
       
-      # Go fullscreen
-      bind = $mainMod, F, fullscreen
-      
-      # Open browsers
-      bind = $mainMod, b, exec, librewolf
-      
-      # Open file explorer
-      bind = $mainMod, t, exec, thunar 
-      
-      # Open Neovim
-      bind = $mainMod, e, exec, /usr/bin/alacritty -e $SHELL -c 'nvim && exec $SHELL' & 2> ./logs/nvim
-      
-      # Open file explorer
-      bind = $mainMod $altMod, v, exec, virt-manager 
-      
-      # Rofi
-      # bind = $altMod, b, exec, $HOME/.config/rofi/applets/bin/battery.sh
-      bind = $altMod, p, exec, $HOME/.config/rofi/powermenu/type-1/powermenu.sh
-      bind = $altMod, o, exec, $HOME/.config/rofi/launchers/type-1/launcher.sh
-      
       # Eww
-      # bind = $mainMod, d, exec, $HOME/.config/eww/scripts/toggle_dashboard.sh $HOME/.config/eww/bars/default/
       bind = $mainMod, d, exec, $HOME/.config/eww/scripts/dashboard.sh -t $HOME/.config/eww/bars/default/
       bind = $altMod, b, exec, $HOME/.config/eww/scripts/dropdown.sh --battery
       bind = $altMod, c, exec, $HOME/.config/eww/scripts/dropdown.sh --calendar

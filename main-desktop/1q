@@ -23,41 +23,12 @@
   # Enable flakes and the new cl tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Enable unfree software on a per-package basis
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "nvidia-x11"
-      "nvidia-settings"
-      "nvidia-persistenced"
-    ];
-
   # Add home configurations
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
       cody = import ../home-manager/default.nix;
     };
-  };
-
-  # Nvidia
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = true;
-    nvidiaSettings = true;
-  };
-
-  # Security
-  security = {
-    polkit.enable = true;
   };
 
   # Hyprland
@@ -112,7 +83,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cody = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "seat" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       librewolf
       brave
@@ -147,10 +118,6 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  # Enable dbus
-  services.dbus.enable = true;
-
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

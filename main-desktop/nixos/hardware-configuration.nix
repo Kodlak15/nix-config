@@ -5,20 +5,39 @@
 
 {
   imports =
-    [ (modulesPath + "/profiles/qemu-guest.nix")
+    [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "sr_mod" "virtio_blk" ];
+  boot.initrd.availableKernelModules = [ "nvme" "ahci" "thunderbolt" "xhci_pci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/73aff8da-9314-48d1-a287-c638e1a59e2d";
+    { device = "/dev/disk/by-uuid/063f0d8d-c9a8-439d-9753-d2a177fc630b";
       fsType = "btrfs";
+      options = [ "subvol=@" ];
     };
 
-  boot.initrd.luks.devices."nixos".device = "/dev/vda3";
+  boot.initrd.luks.devices."nixos-crypt".device = "/dev/disk/by-uuid/93d41d59-c9c5-4960-a27b-afeb217fd11e";
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/063f0d8d-c9a8-439d-9753-d2a177fc630b";
+      fsType = "btrfs";
+      options = [ "subvol=@home" ];
+    };
+
+  fileSystems."/tmp" =
+    { device = "/dev/disk/by-uuid/063f0d8d-c9a8-439d-9753-d2a177fc630b";
+      fsType = "btrfs";
+      options = [ "subvol=@tmp" ];
+    };
+
+  fileSystems."/var" =
+    { device = "/dev/disk/by-uuid/063f0d8d-c9a8-439d-9753-d2a177fc630b";
+      fsType = "btrfs";
+      options = [ "subvol=@var" ];
+    };
 
   swapDevices = [ ];
 
@@ -27,7 +46,9 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp1s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp7s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
