@@ -39,6 +39,14 @@
     };
   };
 
+  # Booloader (maybe remove)
+  boot = {
+    initrd = {
+      kernelModules = [ "nvidia" ];
+    };
+    extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+  };
+
   # Nvidia
   hardware.opengl = {
     enable = true;
@@ -53,11 +61,6 @@
     powerManagement.finegrained = false;
     open = true;
     nvidiaSettings = true;
-  };
-
-  # Security
-  security = {
-    polkit.enable = true;
   };
 
   # Hyprland
@@ -112,7 +115,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cody = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "video" "input" "tty" ]; 
     packages = with pkgs; [
       librewolf
       brave
