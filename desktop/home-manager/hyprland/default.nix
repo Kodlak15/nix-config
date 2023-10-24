@@ -47,6 +47,9 @@
       env = MOZ_ENABLE_WAYLAND,1
       env = MOZ_DBUS_REMOTE,1
       
+      # Startup scripts
+      exec-once = swww init
+       
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
       input {
           kb_layout = us
