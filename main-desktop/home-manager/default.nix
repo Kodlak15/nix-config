@@ -10,7 +10,7 @@
   imports = [
     inputs.hyprland.homeManagerModules.default
     ./hyprland
-    ./programs/neovim
+    ./programs
   ];
 
   # Git configuration

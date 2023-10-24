@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FLAKE="/home/cody/.nix-config/main-desktop#main-desktop"
+FLAKE="/home/cody/nix-config/desktop#hypr"
 EFIPART="/dev/disk/by-label/EFI-NIXOS"
 
 mount_efi() {

@@ -4,6 +4,6 @@
   ...
 }: {
   imports = [
-    ./neovim
+    ./neovim.nix
   ];
 }
