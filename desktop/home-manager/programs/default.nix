@@ -8,5 +8,6 @@
     ./git.nix
     ./alacritty.nix
     ./zsh.nix
+    ./eww.nix
   ];
 }

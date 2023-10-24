@@ -15,6 +15,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    eww = {
+      url = "github:elkowar/eww";
+    };
   };
 
   outputs = {
@@ -23,6 +27,7 @@
     home-manager,
     hyprland,
     nixvim,
+    eww,
     ...
   } @ inputs: let
     inherit (self) outputs;
