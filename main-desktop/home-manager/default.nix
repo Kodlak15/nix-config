@@ -10,6 +10,7 @@
   imports = [
     inputs.hyprland.homeManagerModules.default
     ./hyprland
+    ./programs/neovim
   ];
 
   # Git configuration
@@ -26,6 +27,7 @@
     # Browsers
     librewolf
     brave
+    firefox
     # Utilities
     eza 
     ripgrep

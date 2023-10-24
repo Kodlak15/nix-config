@@ -29,6 +29,9 @@
       "nvidia-x11"
       "nvidia-settings"
       "nvidia-persistenced"
+      "steam"
+      "steam-original"
+      "steam-run"
     ];
 
   # Add home configurations
@@ -67,6 +70,13 @@
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+  };
+
+  # Steam
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
   };
 
   # Use the systemd-boot EFI boot loader.
@@ -133,6 +143,7 @@
     gh
     gnupg
     pass
+    wineWowPackages.wayland
   ];
 
   # Declare environment variables
