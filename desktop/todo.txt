@@ -1,0 +1,6 @@
+# TODO
+- Add git information to zsh prompt
+- Configure programming languages/environments
+- Set up pipewire and audio in general
+- Set up eww
+- Find and set up wallpaper with swww
