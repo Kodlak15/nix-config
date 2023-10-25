@@ -5,6 +5,6 @@
 }: {
   programs.eww = {
     enable = true;
-    configDir = "${config.users.users.cody.home}/.config/eww";
+    configDir = "/home/cody/dotfiles/eww/bars/default";
   };
 }
