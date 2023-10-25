@@ -18,6 +18,16 @@
       e = "nvim $(fzf)";
       o = "cd $(find * -type d | fzf)";
     };
+    initExtra = ''
+      # Git status info
+      autoload -Uz vcs_info
+      precmd() { vcs_info }
+      zstyle ':vcs_info:git:*' formats " %F{#e0af68} %b%f"
+      setopt prompt_subst
+      # Prompt
+      PROMPT='%F{#7aa2f7} % %F{#ffffff}%~%f%F{#f7768e} 󰄾 %f'
+
+    '';
     # -------------------------------------------------------
     # Zsh plugins  
     # -------------------------------------------------------
