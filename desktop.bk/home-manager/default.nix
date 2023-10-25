@@ -15,7 +15,6 @@
   home = {
     username = "cody";
     homeDirectory = "/home/cody";
-
     # This value determines the home Manager release that your
     # configuration is compatible with. This helps avoid breakage
     # when a new home Manager release introduces backwards

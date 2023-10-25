@@ -10,7 +10,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      # inputs.home-manager.nixosModules.home-manager
+      inputs.home-manager.nixosModules.home-manager
     ];
 
   # Enable flakes and the new cl tool
@@ -33,12 +33,12 @@
     ];
 
   # Add home configurations
-  # home-manager = {
-  #   extraSpecialArgs = { inherit inputs outputs; };
-  #   users = {
-  #     cody = import ../home-manager/default.nix;
-  #   };
-  # };
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
+      cody = import ../home-manager/default.nix;
+    };
+  };
 
   # Booloader (maybe remove)
   boot = {
@@ -163,7 +163,6 @@
     pass
     wineWowPackages.wayland
     nix-prefetch-git
-    home-manager
   ];
 
   # Declare environment variables
