@@ -46,6 +46,7 @@
       env = XDG_SESSION_DESKTOP,Hyprland
       env = MOZ_ENABLE_WAYLAND,1
       env = MOZ_DBUS_REMOTE,1
+      env = NIXOS_OZONE_WL,1
       
       # Startup scripts
       exec-once = swww init
