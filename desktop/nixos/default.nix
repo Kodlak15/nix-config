@@ -108,6 +108,13 @@
     shells = with pkgs; [ zsh ];
   };
 
+  # -------------------------------------------------------
+  # Fonts
+  # -------------------------------------------------------
+  fonts.packages = with pkgs; [
+    nerdfonts
+  ];
+
   # Set up networking
   networking.hostName = "nixos";
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -155,6 +162,7 @@
     gnupg
     pass
     wineWowPackages.wayland
+    nix-prefetch-git
   ];
 
   # Declare environment variables
