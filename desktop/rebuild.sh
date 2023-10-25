@@ -17,7 +17,7 @@ validate_user() {
 mount_efi() {
   if [[ -z "$(mount | grep /boot)" ]]; then
     echo "Mounting $EFIPART at /boot..."
-    mount "$EFIPART" /boot
+    sudo mount "$EFIPART" /boot
   fi
 }
 
@@ -40,7 +40,6 @@ mount_efi
 
 # -------------------------------------------------------
 # Rebuild according to user input
-# By default only rebuild home configuration
 # -------------------------------------------------------
 option="$1"
 case $option in
