@@ -5,6 +5,7 @@
   pkgs, 
   lib, 
   hyprland, 
+  eww,
   ...
 }: {
   # -------------------------------------------------------
@@ -172,7 +173,6 @@
   # System packages
   # -------------------------------------------------------
   environment.systemPackages = with pkgs; [
-    neovim # use flake instead
     tmux
     wget
     curl
