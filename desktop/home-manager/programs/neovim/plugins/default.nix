@@ -6,6 +6,9 @@
     ./telescope
     ./neo-tree
     ./alpha
+		./lualine
+		./bufferline
+		./which-key
   ];
 
   programs.nixvim.plugins = {
