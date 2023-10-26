@@ -3,8 +3,10 @@
   ...
 }: {
   imports = [
+	  ./servers
   ];
 
-  programs.nixvim.plugins = {
+  programs.nixvim.plugins.lsp = {
+		enable = true;
   };
 }

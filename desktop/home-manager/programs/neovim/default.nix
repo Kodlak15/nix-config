@@ -18,7 +18,7 @@
     colorschemes = {
       tokyonight = {
         enable = true;
-	style = "night";
+	      style = "night";
       };
     };
   };
