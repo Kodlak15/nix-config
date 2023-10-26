@@ -17,5 +17,11 @@
 		nix.enable = true;
     luasnip.enable = true;
     lsp-format.enable = true;
+    cmp-nvim-lua.enable = true;
+    cmp-npm.enable = true;
+    mini = {
+      enable = true;
+      modules = {}; # TODO
+    };
   };
 }
