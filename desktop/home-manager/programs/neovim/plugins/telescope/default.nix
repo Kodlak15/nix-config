@@ -1,12 +1,9 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
-	  ./keymaps.nix
-	];
+    ./keymaps.nix
+  ];
 
   programs.nixvim.plugins.telescope = {
-		enable = true;
-  }; 
+    enable = true;
+  };
 }

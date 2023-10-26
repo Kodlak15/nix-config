@@ -40,8 +40,8 @@
     systems = ["x86_64-linux"];
 
     # -------------------------------------------------------
-    # This is a function that generates an attribute by 
-    # calling a function you pass to it, with each system as 
+    # This is a function that generates an attribute by
+    # calling a function you pass to it, with each system as
     # an argument
     # -------------------------------------------------------
     forAllSystems = nixpkgs.lib.genAttrs systems;
@@ -57,7 +57,7 @@
     # -------------------------------------------------------
     nixosConfigurations = {
       "hypr" = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs; };
+        specialArgs = {inherit inputs outputs;};
         modules = [
           ./nixos/default.nix
         ];
@@ -70,10 +70,10 @@
     homeConfigurations = {
       "cody@hypr" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-	extraSpecialArgs = { inherit inputs outputs; };
-	modules = [
-	  ./home-manager/default.nix
-	];
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          ./home-manager/default.nix
+        ];
       };
     };
   };

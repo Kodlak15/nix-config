@@ -1,8 +1,5 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
-	  ./nil_ls.nix
+    ./nil_ls.nix
   ];
 }

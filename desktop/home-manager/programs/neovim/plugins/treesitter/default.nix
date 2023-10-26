@@ -1,29 +1,26 @@
-{
-  pkgs,
-  ...
-}: {
-	imports = [
-	];
+{pkgs, ...}: {
+  imports = [
+  ];
 
   programs.nixvim.plugins = {
-		treesitter = {
+    treesitter = {
       enable = true;
       ensureInstalled = "all";
-		  indent = true;
-		};
+      indent = true;
+    };
 
-		treesitter-context = {
-			enable = true;
-			mode = "cursor";
-			maxLines = 3;
-		};
+    treesitter-context = {
+      enable = true;
+      mode = "cursor";
+      maxLines = 3;
+    };
 
-		treesitter-refactor = {
-			enable = true;
-		};
+    treesitter-refactor = {
+      enable = true;
+    };
 
-		ts-autotag = {
-			enable = true;
-		};
-  }; 
+    ts-autotag = {
+      enable = true;
+    };
+  };
 }

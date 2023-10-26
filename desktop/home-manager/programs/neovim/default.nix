@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./plugins
     ./keymaps.nix
@@ -18,7 +15,7 @@
     colorschemes = {
       tokyonight = {
         enable = true;
-	      style = "night";
+        style = "night";
       };
     };
   };

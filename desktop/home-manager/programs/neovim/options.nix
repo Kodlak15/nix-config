@@ -1,10 +1,7 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.nixvim.options = {
     ignorecase = true;
-    expandtab = false; 
+    expandtab = false;
     mouse = "a";
     number = true;
     relativenumber = true;
@@ -17,5 +14,5 @@
     undofile = true;
     undolevels = 10000;
     wrap = false;
-  }; 
+  };
 }

@@ -1,12 +1,9 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
-	  ./servers
+    ./servers
   ];
 
   programs.nixvim.plugins.lsp = {
-		enable = true;
+    enable = true;
   };
 }

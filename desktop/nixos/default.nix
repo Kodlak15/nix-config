@@ -1,26 +1,25 @@
-{ 
-  inputs, 
-  outputs, 
-  config, 
-  pkgs, 
-  lib, 
-  hyprland, 
+{
+  inputs,
+  outputs,
+  config,
+  pkgs,
+  lib,
+  hyprland,
   eww,
   ...
 }: {
   # -------------------------------------------------------
   # Imports
   # -------------------------------------------------------
-  imports =
-    [ 
-      ./hardware-configuration.nix
-      # inputs.home-manager.nixosModules.home-manager
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    # inputs.home-manager.nixosModules.home-manager
+  ];
 
   # -------------------------------------------------------
   # Enable flakes and the new cl tool
   # -------------------------------------------------------
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # -------------------------------------------------------
   # Nix settings
@@ -111,7 +110,7 @@
     dbus.enable = true;
     printing.enable = true;
     xserver = {
-      videoDrivers = [ "nvidia" ];
+      videoDrivers = ["nvidia"];
       libinput.enable = true;
     };
   };
@@ -127,7 +126,7 @@
   # Environment
   # -------------------------------------------------------
   environment = {
-    shells = with pkgs; [ zsh ];
+    shells = with pkgs; [zsh];
   };
 
   # -------------------------------------------------------
@@ -142,7 +141,7 @@
   # -------------------------------------------------------
   networking = {
     hostName = "nixos";
-    wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    wireless.enable = true; # Enables wireless support via wpa_supplicant.
   };
 
   # Set your time zone.
@@ -165,7 +164,7 @@
   users.users.cody = {
     initialPassword = "towerponyforestjeep";
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "input" "tty" ]; 
+    extraGroups = ["wheel" "video" "input" "tty"];
     openssh.authorizedKeys.keys = [];
   };
 
