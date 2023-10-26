@@ -70,5 +70,15 @@
         remap = false;
       };
     }
+    {
+      # Open dashboard
+      mode = "n";
+      key = "<leader>;";
+      action = "<cmd>Alpha<CR>";
+      options = {
+        silent = true;
+        remap = false;
+      };
+    }
   ];
 }
