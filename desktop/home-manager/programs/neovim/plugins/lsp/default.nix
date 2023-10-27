@@ -1,3 +1,4 @@
+{helpers, ...}:
 {
   programs.nixvim.plugins = {
     lsp = {
@@ -21,6 +22,9 @@
       };
     };
     lspkind.enable = true;
-    none-ls.enable = true;
+    none-ls = {
+      enable = true;
+      extraOptions = {};
+    };
   };
 }

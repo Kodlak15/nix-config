@@ -9,14 +9,18 @@
     ./lualine
     ./bufferline
     ./which-key
-    ./comment-nvim
+    ./comment
     ./indent-blankline
     ./noice
+    ./notify
   ];
 
   programs.nixvim.plugins = {
     nix.enable = true;
-    luasnip.enable = true;
+    luasnip = {
+      enable = true;
+      fromVscode = [];
+    };
     lsp-format = {
       enable = true;
       lspServersToEnable = "all";
