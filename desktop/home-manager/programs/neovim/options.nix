@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.nixvim.options = {
     ignorecase = true;
     expandtab = false;

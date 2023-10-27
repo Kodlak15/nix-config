@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.nixvim.plugins.telescope.keymaps = {
     "<leader><leader>" = {
       action = "find_files";

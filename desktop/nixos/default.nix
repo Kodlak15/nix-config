@@ -1,11 +1,7 @@
 {
   inputs,
-  outputs,
-  config,
   pkgs,
   lib,
-  hyprland,
-  eww,
   ...
 }: {
   # -------------------------------------------------------
@@ -13,7 +9,6 @@
   # -------------------------------------------------------
   imports = [
     ./hardware-configuration.nix
-    # inputs.home-manager.nixosModules.home-manager
   ];
 
   # -------------------------------------------------------
@@ -40,6 +35,7 @@
       "steam"
       "steam-original"
       "steam-run"
+      "intelephense"
     ];
 
   # -------------------------------------------------------

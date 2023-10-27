@@ -1,12 +1,13 @@
 {
-	pkgs,
-	...
-}: {
   imports = [
-	];
+  ];
 
-	programs.nixvim.plugins.indent-blankline = {
-		enable = true;
+  programs.nixvim.plugins.indent-blankline = {
+    enable = true;
     scope.enabled = false;
-	};
+    indent = {
+      char = "|";
+      tabChar = "|";
+    };
+  };
 }

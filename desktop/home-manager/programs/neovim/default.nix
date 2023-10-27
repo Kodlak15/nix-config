@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   imports = [
     ./plugins
     ./keymaps.nix
@@ -7,16 +7,16 @@
 
   programs.nixvim = {
     enable = true;
-
     globals = {
       mapleader = " ";
     };
-
     colorschemes = {
       tokyonight = {
         enable = true;
         style = "night";
       };
     };
+    viAlias = true;
+    vimAlias = true;
   };
 }

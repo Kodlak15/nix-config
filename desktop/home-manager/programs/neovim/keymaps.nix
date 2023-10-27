@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.nixvim.keymaps = [
     {
       # Better escape insert mode
@@ -71,7 +71,7 @@
       };
     }
     {
-      # Open dashboard
+      # Toggle dashboard
       mode = "n";
       key = "<leader>;";
       action = "<cmd>Alpha<CR>";
