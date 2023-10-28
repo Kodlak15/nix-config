@@ -2,6 +2,7 @@
   imports = [
     inputs.hyprland.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
+    ./global
     ./local/everest
     # ./hyprland
     # ./programs
