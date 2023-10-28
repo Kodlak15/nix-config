@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-FLAKE="/home/cody/nix-config/desktop#hypr"
-HOMEMGR="/home/cody/nix-config/desktop#cody@hypr"
+FLAKE="/home/cody/nix-config/hosts/desktop#hypr"
+HOMEMGR="/home/cody/nix-config/hosts/desktop#cody@hypr"
 EFIPART="/dev/disk/by-label/EFI-NIXOS"
 
 validate_user() {
