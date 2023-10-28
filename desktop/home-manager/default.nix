@@ -4,7 +4,6 @@
     inputs.nixvim.homeManagerModules.nixvim
     ./hyprland
     ./programs
-    ./dev
   ];
 
   home = {
