@@ -1,5 +1,4 @@
-{helpers, ...}:
-{
+{helpers, ...}: {
   programs.nixvim.plugins = {
     lsp = {
       enable = true;

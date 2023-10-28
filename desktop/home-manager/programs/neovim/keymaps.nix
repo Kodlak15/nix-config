@@ -90,7 +90,8 @@
         remap = false;
       };
     }
-    { # Luasnip
+    {
+      # Luasnip
       mode = "i";
       key = "<Tab>";
       action = ''
@@ -103,7 +104,8 @@
         silent = true;
       };
     }
-    { # Luasnip
+    {
+      # Luasnip
       mode = "s";
       key = "<Tab>";
       action = ''
@@ -112,7 +114,8 @@
         end
       '';
     }
-    { # Luasnip
+    {
+      # Luasnip
       mode = ["i" "s"];
       key = "<S-Tab>";
       action = ''
