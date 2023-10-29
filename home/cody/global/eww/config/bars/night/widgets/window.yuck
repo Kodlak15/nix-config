@@ -1,0 +1,16 @@
+(deflisten window 
+  :initial "..." 
+  "sh $HOME/.config/eww/scripts/hyprland.sh -t"
+)
+
+(defwidget window_w []
+  (eventbox
+    :class "window_w"
+    (box
+      (label 
+        :text "${window}"
+        :limit-width 60
+      )
+    )
+  )
+)
