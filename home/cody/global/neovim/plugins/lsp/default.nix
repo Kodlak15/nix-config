@@ -1,4 +1,4 @@
-{helpers, ...}: {
+{
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
@@ -18,12 +18,123 @@
         svelte.enable = true;
         tsserver.enable = true;
         yamlls.enable = true;
+        efm.enable = true;
       };
     };
-    lspkind.enable = true;
-    none-ls = {
+    efmls-configs = {
       enable = true;
-      extraOptions = {};
+      setup = {
+        bash = {
+          formatter = "shfmt";
+          linter = "shellcheck";
+        };
+        c = {
+          formatter = "clang_format";
+          linter = "cpplint";
+        };
+        cmake = {
+          formatter = "gersemi";
+          linter = "cmake_lint";
+        };
+        cpp = {
+          formatter = "clang_format";
+          linter = "cppcheck";
+        };
+        css = {
+          formatter = "prettier";
+          linter = "stylelint";
+        };
+        dockerfile = {
+          linter = "alex";
+        };
+        go = {
+          formatter = "gofmt";
+          linter = "golangci_lint";
+        };
+        haskell = {
+          formatter = "fourmolu";
+          linter = "alex";
+        };
+        html = {
+          formatter = "prettier";
+          linter = "alex";
+        };
+        javascript = {
+          formatter = "prettier";
+          linter = "eslint";
+        };
+        json = {
+          formatter = "prettier";
+          linter = "alex";
+        };
+        lua = {
+          formatter = "stylua";
+          linter = "luacheck";
+        };
+        make = {
+          linter = "alex";
+        };
+        markdown = {
+          formatter = "cbfmt";
+          linter = "markdownlint";
+        };
+        nix = {
+          formatter = "alejandra";
+          linter = "statix";
+        };
+        php = {
+          formatter = "phpcbf";
+          linter = "phpcs";
+        };
+        python = {
+          formatter = "black";
+          linter = "pylint";
+        };
+        rust = {
+          formatter = "rustfmt";
+          linter = "alex";
+        };
+        scss = {
+          formatter = "prettier";
+          linter = "stylelint";
+        };
+        sh = {
+          formatter = "shfmt";
+          linter = "shellcheck";
+        };
+        sql = {
+          formatter = "sql-formatter";
+          linter = "alex";
+        };
+        toml = {
+          formatter = "taplo";
+          linter = "alex";
+        };
+        typescript = {
+          formatter = "prettier";
+          linter = "eslint";
+        };
+        yaml = {
+          formatter = "yq";
+          linter = "alex";
+        };
+      };
     };
+    # lspkind.enable = true;
+    # none-ls = {
+    #   enable = true;
+    #   sources = {
+    #     diagnostics = {};
+    #     formatting = {
+    #       alejandra.enable = true;
+    #       black.enable = true;
+    #       eslint.enable = true;
+    #       gofmt.enable = true;
+    #       prettier.enable = true;
+    #       rustfmt.enable = true;
+    #       stylua.enable = true;
+    #     };
+    #   };
+    # };
   };
 }

@@ -1,9 +1,9 @@
-# {helpers, ...}:
+# {inputs, ...}:
 {
   programs.nixvim.plugins.notify = {
     enable = true;
     timeout = 3000;
-    # maxHeight = helpers.mkRaw ''
+    # maxHeight = inputs.nixvim.config.helpers.mkRaw ''
     #   function()
     #     return math.floor(vim.o.lines * 0.75)
     #   end

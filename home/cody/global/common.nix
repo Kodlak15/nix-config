@@ -9,7 +9,6 @@
     fzf
     tree
     swww
-    # eww-wayland
     socat
     nmap
     file

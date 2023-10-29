@@ -1,4 +1,4 @@
-{inputs, outputs, ...}: {
+{inputs, ...}: {
   imports = [
     inputs.hyprland.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
