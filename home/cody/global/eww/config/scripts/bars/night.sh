@@ -3,7 +3,6 @@
 set -e
 
 CONFIG="$HOME/.config/eww/bars/night"
-WIDGETS="$HOME/.config/eww/widgets"
 EWW="$HOME/bin/eww"
 
 launch() {

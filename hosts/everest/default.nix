@@ -136,7 +136,7 @@
   # Networking
   # -------------------------------------------------------
   networking = {
-    hostName = "nixos";
+    hostName = "everest";
     wireless.enable = true; # Enables wireless support via wpa_supplicant.
   };
 
