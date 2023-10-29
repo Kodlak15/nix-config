@@ -120,21 +120,5 @@
         };
       };
     };
-    # lspkind.enable = true;
-    # none-ls = {
-    #   enable = true;
-    #   sources = {
-    #     diagnostics = {};
-    #     formatting = {
-    #       alejandra.enable = true;
-    #       black.enable = true;
-    #       eslint.enable = true;
-    #       gofmt.enable = true;
-    #       prettier.enable = true;
-    #       rustfmt.enable = true;
-    #       stylua.enable = true;
-    #     };
-    #   };
-    # };
   };
 }
