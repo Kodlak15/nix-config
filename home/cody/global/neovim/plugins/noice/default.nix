@@ -12,6 +12,6 @@
       "vim.lsp.stylize_markdown" = true;
       "cmp.entry.get_documentation" = true;
     };
-    routes = [];
+    routes = [ ];
   };
 }

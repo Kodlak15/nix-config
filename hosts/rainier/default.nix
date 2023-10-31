@@ -1,13 +1,13 @@
-{ 
-  inputs, 
-  outputs, 
-  config, 
-  pkgs, 
-  lib, 
-  hyprland, 
-  ... }: {
+{ inputs
+, outputs
+, config
+, pkgs
+, lib
+, hyprland
+, ...
+}: {
   imports =
-    [ 
+    [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # Import home-manager NixOS module
@@ -15,8 +15,8 @@
     ];
 
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
   # Enable flakes and the new cl tool
@@ -56,7 +56,7 @@
 
   # Set up networking
   networking.hostName = "nixos-test-vm";
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
   time.timeZone = "US/Pacific";

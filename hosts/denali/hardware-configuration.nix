@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
@@ -14,7 +15,8 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/d5875b5e-3e32-4724-ae2e-6522273814cd";
+    {
+      device = "/dev/disk/by-uuid/d5875b5e-3e32-4724-ae2e-6522273814cd";
       fsType = "btrfs";
       options = [ "subvol=@" ];
     };
@@ -22,25 +24,29 @@
   boot.initrd.luks.devices."nixos-crypt".device = "/dev/disk/by-uuid/87f6a43f-6f5d-467e-a5d0-c5264845317f";
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/d5875b5e-3e32-4724-ae2e-6522273814cd";
+    {
+      device = "/dev/disk/by-uuid/d5875b5e-3e32-4724-ae2e-6522273814cd";
       fsType = "btrfs";
       options = [ "subvol=@home" ];
     };
 
   fileSystems."/tmp" =
-    { device = "/dev/disk/by-uuid/d5875b5e-3e32-4724-ae2e-6522273814cd";
+    {
+      device = "/dev/disk/by-uuid/d5875b5e-3e32-4724-ae2e-6522273814cd";
       fsType = "btrfs";
       options = [ "subvol=@tmp" ];
     };
 
   fileSystems."/var" =
-    { device = "/dev/disk/by-uuid/d5875b5e-3e32-4724-ae2e-6522273814cd";
+    {
+      device = "/dev/disk/by-uuid/d5875b5e-3e32-4724-ae2e-6522273814cd";
       fsType = "btrfs";
       options = [ "subvol=@var" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/EC07-2E9C";
+    {
+      device = "/dev/disk/by-uuid/EC07-2E9C";
       fsType = "vfat";
     };
 

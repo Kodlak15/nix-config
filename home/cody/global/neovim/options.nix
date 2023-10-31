@@ -6,8 +6,10 @@
     number = true;
     relativenumber = true;
     shiftwidth = 2;
+    showmode = false;
     smartcase = true;
     smartindent = true;
+    signcolumn = "yes";
     tabstop = 2;
     termguicolors = true;
     timeoutlen = 300;

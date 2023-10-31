@@ -1,9 +1,8 @@
-{
-  inputs,
-  pkgs,
-  lib,
-  config,
-  ...
+{ inputs
+, pkgs
+, lib
+, config
+, ...
 }: {
   # -------------------------------------------------------
   # Imports
@@ -15,14 +14,14 @@
   # -------------------------------------------------------
   # Enable flakes and the new cl tool
   # -------------------------------------------------------
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # -------------------------------------------------------
   # Nix settings
   # -------------------------------------------------------
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
   # -------------------------------------------------------
@@ -60,7 +59,6 @@
     };
   };
 
-  # TODO Cannot seem to boot with NVIDIA enabled
   # -------------------------------------------------------
   # Nvidia
   # -------------------------------------------------------
@@ -118,8 +116,10 @@
     dbus.enable = true;
     printing.enable = true;
     xserver = {
-      # TODO Cannot seem to boot with NVIDIA enabled
-      videoDrivers = ["nvidia"];
+      # NOTE: uncomment this and rebuild to enable NVIDIA card
+      # System feels very sluggish when enabled, so best to only use when necessary
+      # Ex: gaming, deep learning, etc.
+      # videoDrivers = ["nvidia"];
       libinput.enable = true;
     };
   };
@@ -135,7 +135,7 @@
   # Environment
   # -------------------------------------------------------
   environment = {
-    shells = with pkgs; [zsh];
+    shells = with pkgs; [ zsh ];
   };
 
   # -------------------------------------------------------
@@ -150,7 +150,6 @@
   # -------------------------------------------------------
   networking = {
     hostName = "everest";
-    # wireless.enable = true; # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true;
   };
 
@@ -169,13 +168,25 @@
   hardware.pulseaudio.enable = true;
 
   # -------------------------------------------------------
+  # Virtualization
+  # -------------------------------------------------------
+  virtualisation = {
+    docker.enable = true;
+    libvirtd.enable = true;
+  };
+
+  programs.dconf = {
+    enable = true;
+  };
+
+  # -------------------------------------------------------
   # User account
   # -------------------------------------------------------
   users.users.cody = {
     initialPassword = "towerponyforestjeep";
     isNormalUser = true;
-    extraGroups = ["wheel" "video" "input" "tty"];
-    openssh.authorizedKeys.keys = [];
+    extraGroups = [ "wheel" "video" "input" "docker" "libvirtd" ];
+    openssh.authorizedKeys.keys = [ ];
   };
 
   # -------------------------------------------------------

@@ -1,0 +1,81 @@
+;; NOTE: file paths are to be relative to eww.yuck directory
+
+(defwidget grid []
+  (box
+    :class "grid"
+    :orientation "v"
+    (wallpaper)
+    (box
+      :class "icons"
+      :halign "center"
+      :orientation "h"
+      (box
+        :orientation "v"
+        (icon
+          :class "icon"
+          :action "../../scripts/open_links.sh --gh"
+          :image "/home/cody/dotfiles/eww/images/github.svg"
+        )
+        (icon
+          :class "icon"
+          :action "../../scripts/open_links.sh --rd"
+          :image "/home/cody/dotfiles/eww/images/reddit.svg"
+        )
+      )
+      (box
+        :orientation "v"
+        (icon
+          :class "icon"
+          :action "../../scripts/open_links.sh"
+          :image "/home/cody/dotfiles/eww/images/librewolf.svg"
+        )
+        (icon
+          :class "icon"
+          :action "../../scripts/open_links.sh --gt"
+          :image "/home/cody/dotfiles/eww/images/gentoo.svg"
+        )
+      )
+    )
+  )
+)
+
+(defwidget dashboard []
+  ;;(button
+    ;; Temporary: should do this on actions instead
+    ;; :onclick "/home/cody/.config/eww/scripts/dashboard.sh -t $HOME/.config/eww/bars/default"
+    ;; :onclick "/home/cody/dotfiles/eww/scripts/open_links.sh --gh"
+    (box
+      :class "dashboard"
+      :orientation "v"
+      (box
+        (spotifydb)
+        (box
+          :orientation "v"
+          (weather)
+          (hardware)
+        )
+        (box
+          :orientation "v"
+          ;;(weather)
+          (grid)
+        )
+      )
+    )
+  ;;)
+)
+
+;; Windows
+
+(defwindow dashboard
+  :monitor 0
+  :geometry (geometry
+    :x "0px"
+    :y "-35px"
+    :width "100%"
+    :height "100%"
+    :anchor "center"
+  )
+  :stacking "fg"
+  :exclusive true 
+  (dashboard)
+)

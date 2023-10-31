@@ -1,9 +1,10 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     neofetch
     librewolf
     brave
     webcord
+    spotify
     eza
     ripgrep
     fzf
@@ -23,5 +24,7 @@
     pciutils
     usbutils
     nvtop
+    docker-compose
+    virt-manager
   ];
 }

@@ -31,10 +31,7 @@ STATE="$HOME/.local/state/swww"
 #     | - pets2.jpg
 #     | - pets3.jpg
 # | - ...
-WPDIR="$NIXCFG/home/cody/local/denali/images/wallpaper/"
-
-# Set the working directory
-cd "$WPDIR" || exit
+WPDIR="$HOME/nix-config/home/cody/local/denali/images/wallpaper/"
 
 # Transition variables
 TRANSITION_TYPE="wipe"
@@ -278,6 +275,9 @@ Available commands:
 
 # Acts as the entry point for the script
 run() {
+  # Set the working directory
+  cd "$WPDIR" || exit
+
 	# Set up if necessary
 	setup "$1"
 

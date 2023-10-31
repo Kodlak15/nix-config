@@ -1,8 +1,7 @@
-{
-  inputs,
-  pkgs,
-  lib,
-  ...
+{ inputs
+, pkgs
+, lib
+, ...
 }: {
   # -------------------------------------------------------
   # Imports
@@ -14,14 +13,14 @@
   # -------------------------------------------------------
   # Enable flakes and the new cl tool
   # -------------------------------------------------------
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # -------------------------------------------------------
   # Nix settings
   # -------------------------------------------------------
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
   # -------------------------------------------------------
@@ -107,7 +106,7 @@
     dbus.enable = true;
     printing.enable = true;
     xserver = {
-      videoDrivers = ["nvidia"];
+      videoDrivers = [ "nvidia" ];
       libinput.enable = true;
     };
   };
@@ -123,7 +122,7 @@
   # Environment
   # -------------------------------------------------------
   environment = {
-    shells = with pkgs; [zsh];
+    shells = with pkgs; [ zsh ];
   };
 
   # -------------------------------------------------------
@@ -161,8 +160,8 @@
   users.users.cody = {
     initialPassword = "towerponyforestjeep";
     isNormalUser = true;
-    extraGroups = ["wheel" "video" "input" "tty"];
-    openssh.authorizedKeys.keys = [];
+    extraGroups = [ "wheel" "video" "input" "tty" ];
+    openssh.authorizedKeys.keys = [ ];
   };
 
   # -------------------------------------------------------

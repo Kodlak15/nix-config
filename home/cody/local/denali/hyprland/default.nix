@@ -22,7 +22,7 @@
 
       # Toolkit-specific scale
       env = GDK_SCALE,2
-      env = XCURSOR_SIZE,64
+      env = XCURSOR_SIZE,32
 
       # Environment variables
       env = WLR_NO_HARDWARE_CURSORS,1
@@ -108,13 +108,17 @@
       windowrule = opacity 1.0 override 1.0 override, ^(brave-browser)$   # Remove opacity for brave
       windowrule = opacity 1.0 override 1.0 override, ^(virt-manager)$    # Remove opacity for vms
       windowrule = opacity 1.0 override 1.0 override, ^(thunar)$          # Remove opacity for thunar
+      windowrule = opacity 1.0 override 1.0 override, ^(spotify)$         # Remove opacity for spotify
 
       # Set mod keys
       $mainMod = SUPER
       $altMod = ALT_L
+      $ctlL = Control_L
+      $ctlR = Control_R
 
       # Set key bindings
-      bind = $mainMod, Return, exec, /run/current-system/sw/bin/nvidia-offload alacritty
+      bind = $mainMod, Return, exec, alacritty
+      # bind = $mainMod, Return, exec, /run/current-system/sw/bin/nvidia-offload alacritty
       bind = $mainMod, Q, killactive,
       bind = $mainMod, Delete, killactive,
       bind = $mainMod, M, exit,
@@ -126,6 +130,7 @@
       bind = $mainMod, t, exec, thunar
       bind = $mainMod, e, exec, /usr/bin/alacritty -e $SHELL -c 'nvim && exec $SHELL' & 2> ./logs/nvim
       bind = $mainMod $altMod, v, exec, virt-manager
+      bind = $ctlR, m, exec, spotify
 
       # Move focus with mainMod + arrow keys
       bind = $mainMod, left, movefocus, l

@@ -19,7 +19,7 @@
     nix.enable = true;
     luasnip = {
       enable = true;
-      fromVscode = [];
+      fromVscode = [ ];
     };
     lsp-format = {
       enable = true;
@@ -33,7 +33,7 @@
         ai = {
           n_lines = 500;
           search_method = "cover_or_next";
-          custom_objects = {};
+          custom_objects = { };
         };
         indentscope = {
           symbol = "|";
