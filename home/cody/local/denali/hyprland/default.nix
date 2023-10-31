@@ -25,10 +25,6 @@
       env = XCURSOR_SIZE,64
 
       # Environment variables
-      # env = LIBVA_DRIVER_NAME,nvidia
-      # env = _JAVA_AWT_WM_NOREPARENTING,1
-      # env = GBM_BACKEND,nvidia-drm
-      # env = __GLX_VENDOR_LIBRARY_NAME,nvidia
       env = WLR_NO_HARDWARE_CURSORS,1
       env = CLUTTER_BACKEND,wayland
       env = SDL_VIDEODRIVER,wayland
@@ -118,7 +114,7 @@
       $altMod = ALT_L
 
       # Set key bindings
-      bind = $mainMod, Return, exec, alacritty
+      bind = $mainMod, Return, exec, /run/current-system/sw/bin/nvidia-offload alacritty
       bind = $mainMod, Q, killactive,
       bind = $mainMod, Delete, killactive,
       bind = $mainMod, M, exit,
@@ -180,12 +176,12 @@
       bind = $altMod, c, exec, $HOME/.config/eww/scripts/dropdown.sh --calendar
 
       # Change wallpaper
-      bind = $mainMod $altMod, s, exec, $HOME/bin/wpswap.sh -D $HOME/images/wallpaper/space
-      bind = $mainMod $altMod, f, exec, $HOME/bin/wpswap.sh -D $HOME/images/wallpaper/forest
-      bind = $mainMod $altMod, o, exec, $HOME/bin/wpswap.sh -D $HOME/images/wallpaper/ocean
-      bind = $mainMod $altMod, m, exec, $HOME/bin/wpswap.sh -D $HOME/images/wallpaper/mountains
-      bind = $mainMod $altMod, n, exec, $HOME/bin/wpswap.sh -n
-      bind = $mainMod $altMod, p, exec, $HOME/bin/wpswap.sh -P
+      bind = $mainMod $altMod, s, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/space
+      bind = $mainMod $altMod, f, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/forest
+      bind = $mainMod $altMod, o, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/ocean
+      bind = $mainMod $altMod, m, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/mountains
+      bind = $mainMod $altMod, n, exec, $HOME/nix-config/scripts/wpswap.sh -n
+      bind = $mainMod $altMod, p, exec, $HOME/nix-config/scripts/wpswap.sh -P
     '';
   };
 }

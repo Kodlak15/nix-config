@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Set the working directory
 cd /home/cody/nix-config
 

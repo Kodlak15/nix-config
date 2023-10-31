@@ -13,17 +13,23 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
     shellAliases = {
+      NIXCFG = "$HOME/nix-config/";
       ls = "eza -l";
       lsa = "eza -la";
       e = "nvim $(fzf)";
       o = "cd $(find * -type d | fzf)";
+      alacritty = "nvidia-offload alacritty";
     };
     initExtra = ''
+      # Edit PATH
+      export PATH="$PATH:$HOME/nix-config/scripts/"
+
       # Git status info
       autoload -Uz vcs_info
       precmd() { vcs_info }
       zstyle ':vcs_info:git:*' formats " %F{#e0af68} %b%f"
       setopt prompt_subst
+
       # Prompt
       PROMPT='%F{#7aa2f7} % %F{#ffffff}%~%f%F{#f7768e} 󰄾 %f'
 

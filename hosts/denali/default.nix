@@ -37,7 +37,6 @@
       "steam-original"
       "steam-run"
       "cudatoolkit"
-      # "intelephense"
     ];
 
   # -------------------------------------------------------
@@ -194,6 +193,8 @@
     nix-prefetch-git
     home-manager
     gnumake
+    bc
+    killall
   ];
 
   # -------------------------------------------------------
