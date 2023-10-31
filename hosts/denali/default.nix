@@ -2,6 +2,7 @@
   inputs,
   pkgs,
   lib,
+  config,
   ...
 }: {
   # -------------------------------------------------------
@@ -35,7 +36,8 @@
       "steam"
       "steam-original"
       "steam-run"
-      "intelephense"
+      "cudatoolkit"
+      # "intelephense"
     ];
 
   # -------------------------------------------------------
@@ -59,6 +61,7 @@
     };
   };
 
+  # TODO Cannot seem to boot with NVIDIA enabled
   # -------------------------------------------------------
   # Nvidia
   # -------------------------------------------------------
@@ -75,10 +78,15 @@
     open = true;
     nvidiaSettings = true;
     prime = {
-      sync.enable = true;
+      # sync.enable = true;
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
     };
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   # -------------------------------------------------------
@@ -111,6 +119,7 @@
     dbus.enable = true;
     printing.enable = true;
     xserver = {
+      # TODO Cannot seem to boot with NVIDIA enabled
       videoDrivers = ["nvidia"];
       libinput.enable = true;
     };
@@ -142,7 +151,8 @@
   # -------------------------------------------------------
   networking = {
     hostName = "everest";
-    wireless.enable = true; # Enables wireless support via wpa_supplicant.
+    # wireless.enable = true; # Enables wireless support via wpa_supplicant.
+    networkmanager.enable = true;
   };
 
   # Set your time zone.

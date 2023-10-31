@@ -36,6 +36,7 @@
       "steam-original"
       "steam-run"
       "intelephense"
+      "cudatoolkit"
     ];
 
   # -------------------------------------------------------

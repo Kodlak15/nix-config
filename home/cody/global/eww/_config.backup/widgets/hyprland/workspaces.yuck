@@ -1,0 +1,30 @@
+;; (deflisten workspaces :initial "[]" "$HOME/.config/eww/scripts/hyprland.sh -w")
+;; (deflisten workspaces :initial "[]" "../../scripts/hyprland.sh -w")
+(deflisten workspaces :initial "[]" "$HOME/nix-config/home/cody/global/eww/config/scripts/hyprland.sh &> /home/cody/tmp/logs/w.log")
+;; (deflisten current_workspace :initial "1" "$HOME/.config/eww/scripts/hyprland.sh -a")
+;; (deflisten current_workspace :initial "1" "../../eww/scripts/hyprland.sh -a")
+(deflisten current_workspace :initial "1" "$HOME/nix-config/home/cody/global/eww/config/scripts/hyprland.sh &> /home/cody/tmp/logs/a.log")
+(defwidget workspaces []
+  (eventbox 
+    ;; :onscroll "bash $HOME/.config/eww/scripts/hyprland.sh -c" 
+    ;; :onscroll "bash ../../scripts/hyprland.sh -c" 
+    :onscroll "bash $HOME/nix-config/home/cody/global/eww/config/scripts/hyprland.sh -c &> /home/cody/tmp/logs/c.log" 
+    :class "workspaces"
+    (box 
+      :class "workspaces-container"
+      :space-evenly true
+      (label 
+        :text "${workspaces}${current_workspace}" 
+        :visible false)
+      (for workspace in workspaces
+        (eventbox 
+          :onclick "hyprctl dispatch workspace ${workspace.id}"
+          (box 
+            :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+            (label :text "${workspace.id}")
+          )
+        )
+      )
+    )
+  )
+)

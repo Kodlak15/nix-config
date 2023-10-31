@@ -18,16 +18,17 @@
       ----------------------------------------------
       		      id    res@ref	         pos     scale
       ----------------------------------------------
-      monitor = DP-1, 3840x2160@60.0,  0x0, 1
+      monitor = DP-1, 3456x2160@60.0,  0x0,    1
 
       # Toolkit-specific scale
       env = GDK_SCALE,2
-      env = XCURSOR_SIZE,32
+      env = XCURSOR_SIZE,64
 
       # Environment variables
-      env = LIBVA_DRIVER_NAME,nvidia
-      env = GBM_BACKEND,nvidia-drm
-      env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+      # env = LIBVA_DRIVER_NAME,nvidia
+      # env = _JAVA_AWT_WM_NOREPARENTING,1
+      # env = GBM_BACKEND,nvidia-drm
+      # env = __GLX_VENDOR_LIBRARY_NAME,nvidia
       env = WLR_NO_HARDWARE_CURSORS,1
       env = CLUTTER_BACKEND,wayland
       env = SDL_VIDEODRIVER,wayland

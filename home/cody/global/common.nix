@@ -22,5 +22,6 @@
     lm_sensors
     pciutils
     usbutils
+    nvtop
   ];
 }
