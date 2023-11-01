@@ -12,10 +12,10 @@
 	)
 )
 
-;; TODO
 (defwidget center []
 	(box
 		:class "bar-center"
+		(datetime)
 	)
 )
 
@@ -24,7 +24,7 @@
 		:class "bar-right"
     :halign "end"
 		:space-evenly false
-		(datetime)
+		(systray)
 		(battery)
 	)
 )

@@ -24,27 +24,27 @@
 
 					&.occupied {
 						.circle-outer {
-							border: 1px solid c.$fg
+							border: 2px solid c.$fg
 						}
 					}
 
 					&.empty {
 						.circle-outer {
-							border: 1px solid c.$blue7;
+							border: 2px solid c.$blue7;
 						}
 					}
 
 					&.current {
 						.circle-outer {
-							border: 1px solid c.$blue5;
+							border: 2px solid c.$blue5;
 						}
 					}
 
 					.circle-outer {
-						border: 1px solid c.$fg;
+						border: 2px solid c.$fg;
 						border-radius: 100px;
-						padding: 2px;
-						margin: 8px 2px;
+						padding: 4px;
+						margin: 12px 2px;
 
 						.circle-inner {
 							background: c.$blue7;
@@ -58,22 +58,36 @@
 	}
 
 	.bar-center {
-    .window {
-    	font-weight: bold;
-    	color: c.$blue;
-    }
+		.datetime {
+			color: c.$blue5;
+		}
 	}
 
 	.bar-right {
 		margin-right: g.$margin;
-
-		.datetime {
+		
+		.systray {
+			font-size: 24px;
 			color: c.$blue5;
+
+			& > * {
+				padding: 8px;
+				margin-right: 8px;
+			}
+
+			button {
+				color: c.$blue5;
+				background: inherit;
+				border: none;
+				box-shadow: none;
+				text-shadow: none;
+			}
 		}
 
 		.battery {
+			font-size: 24px;
 			color: c.$blue5;
-			margin-left: 12px;
+			margin-left: 8px;
 
 			&.low {
 				color: c.$red;

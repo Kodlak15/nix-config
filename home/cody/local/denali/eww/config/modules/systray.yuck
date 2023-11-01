@@ -1,0 +1,36 @@
+(defwidget spotify []
+	(button
+		:class "spotify"
+		;; :timeout "5s"
+		:onclick "./scripts/applaunch.sh --spotify"
+		""
+	)
+)
+
+(defwidget steam []
+	(button
+		:class "steam"
+		;; :timeout "5s"
+		:onclick "./scripts/applaunch.sh --steam"
+		"󰓓"
+	)
+)
+
+(defwidget discord []
+	(button
+		:class "discord"
+		;; :timeout "5s"
+		:onclick "./scripts/applaunch.sh --discord"
+		"󰙯"
+	)
+)
+
+(defwidget systray []
+	(box
+		:class "systray"
+		:valign "center"
+		(spotify)
+		(steam)
+		(discord)
+	)
+)

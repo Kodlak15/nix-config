@@ -3,7 +3,7 @@
     neofetch
     librewolf
     brave
-    webcord
+    discord
     spotify
     eza
     ripgrep

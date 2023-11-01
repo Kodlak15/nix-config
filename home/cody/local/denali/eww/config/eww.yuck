@@ -3,6 +3,7 @@
 (include "./modules/workspaces.yuck")
 (include "./modules/datetime.yuck")
 (include "./modules/battery.yuck")
+(include "./modules/systray.yuck")
 
 ;; Include windows
 (include "./windows/bar.yuck")
