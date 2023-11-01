@@ -1,6 +1,7 @@
-{ pkgs
-, config
-, ...
+{
+  pkgs,
+  config,
+  ...
 }: {
   programs.zsh = {
     enable = true;
@@ -33,7 +34,7 @@
       setopt PROMPT_SUBST
 
       # Prompt
-      PROMPT='%F{#7aa2f7} % %F{#c0caf5}%~%f%F{#89ddff} 󰄾 %f%F{#bb9af7} $(__git_ps1 "(%s) ")%f'
+      PROMPT='%F{#7aa2f7} % %F{#c0caf5}%~%f %F{#bb9af7}$(__git_ps1 "(%s)")%f %F{#89ddff}󰄾 %f'
     '';
     # -------------------------------------------------------
     # Zsh plugins

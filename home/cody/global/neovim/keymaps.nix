@@ -116,7 +116,7 @@
     }
     {
       # Luasnip
-      mode = [ "i" "s" ];
+      mode = ["i" "s"];
       key = "<S-Tab>";
       action = ''
         function()

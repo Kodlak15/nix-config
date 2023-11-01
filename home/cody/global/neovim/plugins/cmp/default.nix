@@ -8,11 +8,11 @@
       enable = true;
       autoEnableSources = true;
       sources = [
-        { name = "nvim_lsp"; }
-        { name = "luasnip"; }
-        { name = "path"; }
-        { name = "buffer"; }
-        { name = "crates"; }
+        {name = "nvim_lsp";}
+        {name = "luasnip";}
+        {name = "path";}
+        {name = "buffer";}
+        {name = "crates";}
       ];
       mapping = {
         "<C-n>" = "cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert })";
@@ -38,7 +38,7 @@
             	end
             end
           '';
-          modes = [ "i" "s" ];
+          modes = ["i" "s"];
         };
         "<S-Tab>" = {
           action = ''
@@ -52,7 +52,7 @@
             	end
             end
           '';
-          modes = [ "i" "s" ];
+          modes = ["i" "s"];
         };
       };
       snippet.expand = "luasnip";

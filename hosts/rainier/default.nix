@@ -1,30 +1,30 @@
-{ inputs
-, outputs
-, config
-, pkgs
-, lib
-, hyprland
-, ...
+{
+  inputs,
+  outputs,
+  config,
+  pkgs,
+  lib,
+  hyprland,
+  ...
 }: {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # Import home-manager NixOS module
-      inputs.home-manager.nixosModules.home-manager
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # Import home-manager NixOS module
+    inputs.home-manager.nixosModules.home-manager
+  ];
 
   nix.settings = {
-    substituters = [ "https://hyprland.cachix.org" ];
-    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
   # Enable flakes and the new cl tool
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Add home configurations
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
+    extraSpecialArgs = {inherit inputs outputs;};
     users = {
       cody = import ../home-manager/default.nix;
     };
@@ -83,7 +83,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cody = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       librewolf
       brave
