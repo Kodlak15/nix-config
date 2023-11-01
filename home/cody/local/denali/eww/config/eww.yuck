@@ -1,1 +1,8 @@
+;; Include modules
+(include "./modules/window.yuck")
+(include "./modules/workspaces.yuck")
+(include "./modules/datetime.yuck")
+(include "./modules/battery.yuck")
+
+;; Include windows
 (include "./windows/bar.yuck")

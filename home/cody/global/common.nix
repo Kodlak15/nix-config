@@ -26,5 +26,8 @@
     nvtop
     docker-compose
     virt-manager
+    jq
+    playerctl
+    acpi
   ];
 }

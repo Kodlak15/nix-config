@@ -1,5 +1,87 @@
 @use "./colors" as c;
+@use "./general" as g;
 
 .bar-container {
-	background: c.$background;
+	font-family: Fira Code Nerd Font;
+	font-size: 16px;
+	background: c.$bg-dark;
+
+	.bar-left {
+		margin-left: g.$margin;
+
+		.nix-snowflake {
+			padding: 16px 0px 16px 30px;
+			margin-right: 12px;
+			background-size: 32px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.workspaces {
+			.workspaces-container {
+				.workspace-id {
+				  padding-right: g.$spacing;
+
+					&.occupied {
+						.circle-outer {
+							border: 1px solid c.$fg
+						}
+					}
+
+					&.empty {
+						.circle-outer {
+							border: 1px solid c.$blue7;
+						}
+					}
+
+					&.current {
+						.circle-outer {
+							border: 1px solid c.$blue5;
+						}
+					}
+
+					.circle-outer {
+						border: 1px solid c.$fg;
+						border-radius: 100px;
+						padding: 2px;
+						margin: 8px 2px;
+
+						.circle-inner {
+							background: c.$blue7;
+						  border-radius: 100px;
+						  padding: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.bar-center {
+    .window {
+    	font-weight: bold;
+    	color: c.$blue;
+    }
+	}
+
+	.bar-right {
+		margin-right: g.$margin;
+
+		.datetime {
+			color: c.$blue5;
+		}
+
+		.battery {
+			color: c.$blue5;
+			margin-left: 12px;
+
+			&.low {
+				color: c.$red;
+			}
+
+			&.charging {
+				color: c.$green;
+			}
+		}
+	}
 }
