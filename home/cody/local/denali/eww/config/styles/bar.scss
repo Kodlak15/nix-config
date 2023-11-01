@@ -47,7 +47,7 @@
 						margin: 12px 2px;
 
 						.circle-inner {
-							background: c.$blue7;
+							background: c.$blue;
 						  border-radius: 100px;
 						  padding: 8px;
 						}
@@ -59,7 +59,7 @@
 
 	.bar-center {
 		.datetime {
-			color: c.$blue5;
+			color: c.$green2;
 		}
 	}
 
@@ -76,7 +76,8 @@
 			}
 
 			button {
-				color: c.$blue5;
+				// color: c.$blue5;
+				color: c.$blue;
 				background: inherit;
 				border: none;
 				box-shadow: none;
@@ -86,7 +87,8 @@
 
 		.battery {
 			font-size: 24px;
-			color: c.$blue5;
+			// color: c.$blue5;
+			color: c.$blue;
 			margin-left: 8px;
 
 			&.low {
