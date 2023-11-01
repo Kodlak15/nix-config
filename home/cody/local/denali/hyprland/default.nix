@@ -57,7 +57,7 @@
           gaps_out = 5
           border_size = 2.5
           col.active_border = rgba(89ddffff) rgba(89ddffff) 90deg
-          col.inactive_border = rgba(394b70ff)
+          col.inactive_border = rgba(3d59a1ff)
           layout = dwindle
       }
 
@@ -71,8 +71,8 @@
           shadow_render_power = 3
           col.shadow = rgba(1a1a1aee)
           fullscreen_opacity = 1.0
-          active_opacity = 0.90
-          inactive_opacity = 0.90
+          active_opacity = 0.95
+          inactive_opacity = 0.95
       }
 
       animations {
