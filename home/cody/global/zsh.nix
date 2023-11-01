@@ -30,8 +30,7 @@
       setopt prompt_subst
 
       # Prompt
-      PROMPT='%F{#7aa2f7} % %F{#ffffff}%~%f%F{#f7768e} 󰄾 %f'
-
+      PROMPT='%F{#7aa2f7} % %F{#c0caf5}%~%f%F{#89ddff} 󰄾 %f'
     '';
     # -------------------------------------------------------
     # Zsh plugins

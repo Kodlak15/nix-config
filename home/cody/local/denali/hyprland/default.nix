@@ -55,9 +55,9 @@
       general {
           gaps_in = 2.5
           gaps_out = 5
-          border_size = 2
-          col.active_border = rgba(7dcfffff) rgba(7dcfffff) 90deg
-          col.inactive_border = rgba(59595900)
+          border_size = 2.5
+          col.active_border = rgba(89ddffff) rgba(89ddffff) 90deg
+          col.inactive_border = rgba(394b70ff)
           layout = dwindle
       }
 
