@@ -38,7 +38,11 @@
           ];
 
           shellHook = ''
-            echo "node `${pkgs.nodejs}/bin/node --version`"
+            echo -ne "
+              -------------------------------------------------------
+              echo "node `${pkgs.nodejs}/bin/node --version`"
+              -------------------------------------------------------
+            "
             exec zsh
           '';
         };

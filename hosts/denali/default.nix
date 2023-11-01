@@ -75,7 +75,6 @@
     open = true;
     nvidiaSettings = true;
     prime = {
-      # sync.enable = true;
       offload = {
         enable = true;
         enableOffloadCmd = true;
@@ -149,7 +148,7 @@
   # Networking
   # -------------------------------------------------------
   networking = {
-    hostName = "everest";
+    hostName = "denali";
     networkmanager.enable = true;
   };
 
