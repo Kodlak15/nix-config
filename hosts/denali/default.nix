@@ -119,7 +119,7 @@
       # NOTE: uncomment this and rebuild to enable NVIDIA card
       # System feels very sluggish when enabled, so best to only use when necessary
       # Ex: gaming, deep learning, etc.
-      # videoDrivers = ["nvidia"];
+      videoDrivers = ["nvidia"];
       libinput.enable = true;
     };
   };
