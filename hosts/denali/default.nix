@@ -131,7 +131,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   sound.enable = true;
-  # hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.enable = false;
 
   virtualisation = {
     docker.enable = true;
