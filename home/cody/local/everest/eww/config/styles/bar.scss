@@ -1,0 +1,103 @@
+@use "./colors" as c;
+@use "./general" as g;
+
+.bar-container {
+	font-family: Fira Code Nerd Font;
+	font-size: 16px;
+	background: c.$bg-dark;
+
+	.bar-left {
+		margin-left: g.$margin;
+
+		.nix-snowflake {
+			padding: 16px 0px 16px 30px;
+			margin-right: 12px;
+			background-size: 32px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.workspaces {
+			.workspaces-container {
+				.workspace-id {
+				  padding-right: g.$spacing;
+
+					&.occupied {
+						.circle-outer {
+							border: 2px solid c.$fg
+						}
+					}
+
+					&.empty {
+						.circle-outer {
+							border: 2px solid c.$blue7;
+						}
+					}
+
+					&.current {
+						.circle-outer {
+							border: 2px solid c.$blue5;
+						}
+					}
+
+					.circle-outer {
+						border: 2px solid c.$fg;
+						border-radius: 100px;
+						padding: 4px;
+						margin: 12px 2px;
+
+						.circle-inner {
+							background: c.$blue;
+						  border-radius: 100px;
+						  padding: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.bar-center {
+		.datetime {
+			color: c.$green2;
+		}
+	}
+
+	.bar-right {
+		margin-right: g.$margin;
+		
+		.systray {
+			font-size: 24px;
+			color: c.$blue5;
+
+			& > * {
+				padding: 8px;
+				margin-right: 8px;
+			}
+
+			button {
+				// color: c.$blue5;
+				color: c.$blue;
+				background: inherit;
+				border: none;
+				box-shadow: none;
+				text-shadow: none;
+			}
+		}
+
+		.battery {
+			font-size: 24px;
+			// color: c.$blue5;
+			color: c.$blue;
+			margin-left: 8px;
+
+			&.low {
+				color: c.$red;
+			}
+
+			&.charging {
+				color: c.$green;
+			}
+		}
+	}
+}
