@@ -3,6 +3,7 @@
     neofetch
     librewolf
     brave
+    tor-browser-bundle-bin
     discord
     spotify
     eza

@@ -6,5 +6,6 @@
     ./alacritty.nix
     ./zsh.nix
     ./virtualization.nix
+    ./tmux.nix
   ];
 }
