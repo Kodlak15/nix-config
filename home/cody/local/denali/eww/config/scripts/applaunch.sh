@@ -9,19 +9,11 @@ spotify() {
 }
 
 steam() {
-	if [[ ! -z $(command -v nvidia-offload) ]]; then
-	  exec nvidia-offload steam &
-	else
-		exec steam &
-	fi
+	exec steam &
 }
 
 discord() {
-	if [[ ! -z $(command -v nvidia-offload) ]]; then
-	  exec nvidia-offload discord &
-	else
-		exec discord &
-	fi
+	exec discord &
 }
 
 case "$1" in
