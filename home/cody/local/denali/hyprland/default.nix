@@ -134,6 +134,8 @@
       bind = $mainMod, e, exec, /usr/bin/alacritty -e $SHELL -c 'nvim && exec $SHELL' & 2> ./logs/nvim
       bind = $mainMod $altMod, v, exec, virt-manager
       bind = $ctlR, m, exec, spotify
+      # bind = $ctlR, s, exec, grim -g "$(slurp)" $HOME/screenshots/$(date + '%s_grim.png') 2> $HOME/screenshots/error.log
+      bind = $ctlR, s, exec, $HOME/nix-config/scripts/screenshot.sh
 
       # Move focus with mainMod + arrow keys
       bind = $mainMod, left, movefocus, l

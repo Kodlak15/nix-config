@@ -29,6 +29,10 @@
     virt-manager
     jq
     playerctl
+    pavucontrol
     acpi
+    grim 
+    imv
+    slurp
   ];
 }

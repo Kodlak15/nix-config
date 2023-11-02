@@ -19,6 +19,7 @@
       e = "nvim $(fzf)";
       o = "cd $(find * -type d | fzf)";
       alacritty = "nvidia-offload alacritty";
+      screenshots = "$HOME/nix-config/scripts/screenshot.sh";
     };
     initExtra = ''
       # Edit PATH

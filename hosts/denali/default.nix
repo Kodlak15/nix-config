@@ -95,6 +95,18 @@
       videoDrivers = ["nvidia"];
       libinput.enable = true;
     };
+    pipewire = {
+      enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      pulse.enable = true;
+    };
+  };
+
+  security = {
+    rtkit.enable = true;
   };
 
   users = {
@@ -119,7 +131,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  # hardware.pulseaudio.enable = false;
 
   virtualisation = {
     docker.enable = true;
