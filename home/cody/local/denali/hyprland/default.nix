@@ -36,7 +36,7 @@
       env = NIXOS_OZONE_WL,1
 
       # Needed to run steam in offload mode
-      env = XDG_DATA_HOME,"$HOME/.local/share"
+      env = XDG_DATA_HOME,$HOME/.local/share
 
       # Startup scripts
       exec-once = swww init
