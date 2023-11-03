@@ -6,6 +6,9 @@
         lua-ls.enable = true;
         html.enable = true;
         cssls.enable = true;
+        ccls.enable = true;
+        clangd.enable = true;
+        cmake.enable = true;
         gopls.enable = true;
         eslint.enable = true;
         nil_ls.enable = true;

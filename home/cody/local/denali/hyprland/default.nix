@@ -136,7 +136,7 @@
       bind = $ctlR, m, exec, spotify
       # bind = $ctlR, s, exec, grim -g "$(slurp)" $HOME/screenshots/$(date + '%s_grim.png') 2> $HOME/screenshots/error.log
       bind = $ctlR, s, exec, $HOME/nix-config/scripts/screenshot.sh
-      bind = $ctlR, v, exec, pavucontrol
+      bind = $ctlR $altMod, v, exec, pavucontrol
 
       # Move focus with mainMod + arrow keys
       bind = $mainMod, left, movefocus, l
