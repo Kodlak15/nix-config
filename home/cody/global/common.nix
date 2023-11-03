@@ -34,5 +34,9 @@
     grim 
     imv
     slurp
+
+    # This works!
+    # Try to add as dependency within nixvim instead
+    vimPlugins.friendly-snippets
   ];
 }

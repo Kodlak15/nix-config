@@ -13,13 +13,14 @@
     ./indent-blankline
     ./noice
     ./notify
+    ./packer
   ];
 
   programs.nixvim.plugins = {
     nix.enable = true;
     luasnip = {
       enable = true;
-      fromVscode = [];
+      fromVscode = [{ paths = /nix/store/3v949yzy8qgz89wrcwp5w66p544mynl8-vimplugin-friendly-snippets-2023-10-01; }];
     };
     lsp-format = {
       enable = true;
