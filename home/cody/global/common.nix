@@ -34,9 +34,9 @@
     grim 
     imv
     slurp
+    pywal
 
-    # This works!
-    # Try to add as dependency within nixvim instead
+    # Maybe add as dependency within nixvim instead
     vimPlugins.friendly-snippets
   ];
 }

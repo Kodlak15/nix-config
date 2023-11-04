@@ -1,3 +1,4 @@
+{lib, ...}:
 {
   programs.nixvim.options = {
     ignorecase = true;

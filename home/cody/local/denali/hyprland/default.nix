@@ -76,6 +76,8 @@
           fullscreen_opacity = 1.0
           active_opacity = 0.95
           inactive_opacity = 0.95
+          # active_opacity = 0.90
+          # inactive_opacity = 0.90
       }
 
       animations {

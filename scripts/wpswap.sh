@@ -299,6 +299,9 @@ run() {
 	-P | --prev) prev "$2" ;;
 	-h | --help | *) print_help ;;
 	esac
+
+	# Set terminal colors based on current image
+	# wal -i "$(wp_path)" -n
 }
 
 # Call run function to run the script

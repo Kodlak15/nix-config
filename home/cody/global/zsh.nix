@@ -30,9 +30,11 @@
       precmd() { vcs_info }
       zstyle ':vcs_info:git:*' formats " %F{#e0af68} %b%f"
       setopt prompt_subst
-
       source $HOME/.nix-profile/share/git/contrib/completion/git-prompt.sh
       setopt PROMPT_SUBST
+
+      # Set pywal generated terminal colors
+      # (cat ~/.cache/wal/sequences &)
 
       # Prompt
       PROMPT='%F{#7aa2f7} % %F{#c0caf5}%~%f %F{#bb9af7}$(__git_ps1 "(%s)")%f%F{#89ddff}󰄾 %f'

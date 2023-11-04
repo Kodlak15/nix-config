@@ -1,12 +1,11 @@
 @use "./colors" as c;
-// @use "/home/cody/.cache/wal/colors" as c;
 @use "./general" as g;
 
 .bar-container {
 	font-family: Fira Code Nerd Font;
 	font-size: 16px;
-	background: c.$bg-dark;
-	// background: c.$background;
+	// background: c.$bg-dark;
+	background: c.$background;
 
 	.bar-left {
 		margin-left: g.$margin;
@@ -26,35 +25,34 @@
 
 					&.occupied {
 						.circle-outer {
-							border: 2px solid c.$fg
-							// border: 2px solid c.$foreground;
+							// border: 2px solid c.$fg
+							border: 2px solid c.$foreground;
 						}
 					}
 
 					&.empty {
 						.circle-outer {
-							border: 2px solid c.$blue7;
-							// border: 2px solid c.$color1;
+							// border: 2px solid c.$blue7;
+							border: 2px solid c.$color1;
 						}
 					}
 
 					&.current {
 						.circle-outer {
-							border: 2px solid c.$blue5;
-							// border: 2px solid c.$color12;
+							// border: 2px solid c.$blue5;
+							border: 2px solid c.$color0;
 						}
 					}
 
 					.circle-outer {
-						border: 2px solid c.$fg;
-						// border: 2px solid c.$foreground;
+						// border: 2px solid c.$fg;
+						border: 2px solid c.$foreground;
 						border-radius: 100px;
 						padding: 4px;
 						margin: 12px 2px;
 
 						.circle-inner {
 							background: c.$blue;
-				      // background: c.$color2;
 						  border-radius: 100px;
 						  padding: 8px;
 						}
@@ -66,8 +64,8 @@
 
 	.bar-center {
 		.datetime {
-			color: c.$green2;
-			// color: c.$color4;
+			// color: c.$green2;
+			color: c.$color4;
 		}
 	}
 
@@ -76,8 +74,8 @@
 		
 		.systray {
 			font-size: 24px;
-			color: c.$blue5;
-		  // border: 2px solid c.$color0;
+			// color: c.$blue5;
+		  border: 2px solid c.$color0;
 
 			& > * {
 				padding: 8px;
@@ -85,8 +83,8 @@
 			}
 
 			button {
-				color: c.$blue;
-				// color: c.$color4;
+				// color: c.$blue;
+				color: c.$blue2;
 				background: inherit;
 				border: none;
 				box-shadow: none;
@@ -97,17 +95,15 @@
 		.battery {
 			font-size: 24px;
 			color: c.$blue;
-			// color: c.$color4;
 			margin-left: 8px;
 
 			&.low {
 				color: c.$red;
-				// color: c.$color5;
 			}
 
 			&.charging {
-				color: c.$green;
-				// color: c.$color3;
+				// color: c.$green;
+				color: c.$color3;
 			}
 		}
 	}
