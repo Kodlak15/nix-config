@@ -9,7 +9,8 @@
       # Match session numbers to number row
       set -g base-index 0
       # Set TERM, the default is "screen", "screen-256color" can be tried if "tmux-256color" doesn't work.
-      set -g default-terminal "tmux-256color"
+      # set -g default-terminal "tmux-256color"
+      set -g default-terminal "screen-256color"
       # Enable mouse
       set -g mouse on
       # Disable drag action in normal mode if your pointer causes problems with
