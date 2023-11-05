@@ -24,7 +24,7 @@
 
 					&.occupied {
 						.circle-outer {
-							border: 2px solid c.$color2;
+							border: 2px solid c.$color11;
 						}
 					}
 
@@ -58,7 +58,7 @@
 
 	.bar-center {
 		.datetime {
-			color: c.$color4;
+			color: c.$color8;
 		}
 	}
 
@@ -75,7 +75,7 @@
 			}
 
 			button {
-				color: c.$color4;
+				color: c.$color8;
 				background: inherit;
 				border: none;
 				box-shadow: none;
@@ -85,7 +85,7 @@
 
 		.battery {
 			font-size: 24px;
-			color: c.$color4;
+			color: c.$color8;
 			margin-left: 8px;
 
 			&.low {
