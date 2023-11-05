@@ -145,7 +145,7 @@
   users.users.cody = {
     initialPassword = "towerponyforestjeep";
     isNormalUser = true;
-    extraGroups = ["wheel" "video" "input" "docker" "libvirtd"];
+    extraGroups = ["wheel" "audio" "video" "input" "docker" "libvirtd"];
     openssh.authorizedKeys.keys = [];
   };
 

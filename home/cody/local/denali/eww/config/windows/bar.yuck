@@ -24,6 +24,8 @@
 		:class "bar-right"
     :halign "end"
 		:space-evenly false
+		(brightness)
+		(volume)
 		(systray)
 		(battery)
 	)

@@ -2,6 +2,7 @@
 @use "../general" as g;
 
 .bar-container {
+	all: unset;
 	font-family: Fira Code Nerd Font;
 	font-size: 16px;
 	background: c.$background;
@@ -64,6 +65,63 @@
 
 	.bar-right {
 		margin-right: g.$margin;
+
+		.brightness {
+			color: c.$color8;
+			margin-right: 8px;
+
+			scale {
+			  min-width: 64px;
+			  min-height: 5px;
+			}
+
+			.brightness-icon {
+			  font-size: 24px;
+			}
+
+			trough {
+				background: c.$color8;
+				border: none;
+			}
+
+			slider {
+				background: c.$color11;
+				box-shadow: none;
+				text-shadow: none;
+			}
+
+			highlight {
+				background: c.$color11;
+			}
+		}
+
+		.volume {
+			color: c.$color8;
+
+			.volume-icon {
+			  font-size: 24px;
+			}
+
+			scale {
+			  min-width: 64px;
+			  min-height: 5px;
+			}
+
+			trough {
+				background: c.$color8;
+				border: none;
+			}
+
+			slider {
+				background: c.$color11;
+				box-shadow: none;
+				text-shadow: none;
+			}
+
+			highlight {
+				background: c.$color11;
+			}
+		}
 		
 		.systray {
 			font-size: 24px;

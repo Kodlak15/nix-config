@@ -36,6 +36,7 @@
     slurp
     pywal
     ydotool
+    brightnessctl
 
     # Maybe add as dependency within nixvim instead
     vimPlugins.friendly-snippets
