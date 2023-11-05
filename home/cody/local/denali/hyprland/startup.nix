@@ -6,6 +6,7 @@
 
       # Startup scripts
       exec-once = swww init
+      exec-once = $HOME/.nix-profile/bin/eww open bar 2> /home/cody/tmp/ewwinit.log
     '';
   };
 }
