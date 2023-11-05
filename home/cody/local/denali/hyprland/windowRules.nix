@@ -8,7 +8,7 @@
       windowrule = opacity 1.0 override 1.0 override, ^(thunar)$          # Remove opacity for thunar
       windowrule = opacity 1.0 override 1.0 override, ^(spotify)$         # Remove opacity for spotify
 
-      windowrule = opacity 0.85 override 0.90 override, ^(neovim)$        # Reduce opacity for neovim
+      windowrule = opacity 0.95 0.95, class:^(nvim)$                      # Reduce opacity for neovim
     '';
   };
 }

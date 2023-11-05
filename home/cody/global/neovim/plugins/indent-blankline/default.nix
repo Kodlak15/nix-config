@@ -3,7 +3,7 @@
   ];
 
   programs.nixvim.plugins.indent-blankline = {
-    enable = true;
+    enable = false;
     scope.enabled = false;
     indent = {
       char = "|";
