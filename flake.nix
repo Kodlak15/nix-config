@@ -83,8 +83,7 @@
       "cody@denali" = lib.homeManagerConfiguration {
         modules = [./home/cody/denali.nix];
         pkgs = pkgsFor.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-      };
+        extraSpecialArgs = {inherit inputs outputs;}; };
       # Test VM
       "cody@rainier" = lib.homeManagerConfiguration {
         modules = [./home/cody/rainier.nix];

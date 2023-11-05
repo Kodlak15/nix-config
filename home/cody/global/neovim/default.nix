@@ -11,12 +11,14 @@
     globals = {
       mapleader = " ";
     };
-    colorschemes = {
-      tokyonight = {
-        enable = true;
-        style = "night";
-      };
-    };
+    extraPlugins = [ pkgs.vimPlugins.pywal-nvim ];
+    colorscheme = "pywal";
+    # colorschemes = {
+    #   tokyonight = {
+    #     enable = true;
+    #     style = "night";
+    #   };
+    # };
     viAlias = true;
     vimAlias = true;
   };

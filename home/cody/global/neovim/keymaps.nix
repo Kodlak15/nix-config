@@ -124,5 +124,11 @@
         end
       '';
     }
+    {
+      # Source init.lua
+      mode = ["n"];
+      key = "<Leader>s";
+      action = "<cmd>silent! source /home/cody/.config/nvim/init.lua<CR>";
+    }
   ];
 }
