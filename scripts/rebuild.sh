@@ -19,7 +19,11 @@ rebuild_nix() {
 }
 
 rebuild_home() {
+	if [[ -n $(pgrep -x ".eww-wrapped") ]]; then
+	  killall ".eww-wrapped"
+	fi
   home-manager switch --flake ".#cody@$flake" --impure
+	eww open bar
 }
 
 flake="$1"

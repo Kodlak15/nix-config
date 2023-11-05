@@ -1,10 +1,9 @@
-@use "./colors" as c;
-@use "./general" as g;
+@use "/home/cody/.cache/wal/colors" as c;
+@use "../general" as g;
 
 .bar-container {
 	font-family: Fira Code Nerd Font;
 	font-size: 16px;
-	// background: c.$bg-dark;
 	background: c.$background;
 
 	.bar-left {
@@ -25,34 +24,29 @@
 
 					&.occupied {
 						.circle-outer {
-							// border: 2px solid c.$fg
-							border: 2px solid c.$foreground;
+							border: 2px solid c.$color2;
 						}
 					}
 
 					&.empty {
 						.circle-outer {
-							// border: 2px solid c.$blue7;
-							border: 2px solid c.$color1;
+							border: 2px solid #222222;
 						}
 					}
 
 					&.current {
 						.circle-outer {
-							// border: 2px solid c.$blue5;
-							border: 2px solid c.$color0;
+							border: 2px solid #ffffff;
 						}
 					}
 
 					.circle-outer {
-						// border: 2px solid c.$fg;
-						border: 2px solid c.$foreground;
 						border-radius: 100px;
 						padding: 4px;
 						margin: 12px 2px;
 
 						.circle-inner {
-							background: c.$blue;
+				      background: c.$color8;
 						  border-radius: 100px;
 						  padding: 8px;
 						}
@@ -64,7 +58,6 @@
 
 	.bar-center {
 		.datetime {
-			// color: c.$green2;
 			color: c.$color4;
 		}
 	}
@@ -74,7 +67,6 @@
 		
 		.systray {
 			font-size: 24px;
-			// color: c.$blue5;
 		  border: 2px solid c.$color0;
 
 			& > * {
@@ -83,8 +75,7 @@
 			}
 
 			button {
-				// color: c.$blue;
-				color: c.$blue2;
+				color: c.$color4;
 				background: inherit;
 				border: none;
 				box-shadow: none;
@@ -94,16 +85,15 @@
 
 		.battery {
 			font-size: 24px;
-			color: c.$blue;
+			color: c.$color4;
 			margin-left: 8px;
 
 			&.low {
-				color: c.$red;
+				color: #ff0000;
 			}
 
 			&.charging {
-				// color: c.$green;
-				color: c.$color3;
+				color: #00ff00;
 			}
 		}
 	}

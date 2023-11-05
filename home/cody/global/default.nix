@@ -1,11 +1,11 @@
 {
   imports = [
     ./neovim
+    ./tmux
     ./common.nix
     ./git.nix
     ./alacritty.nix
     ./zsh.nix
     ./virtualization.nix
-    ./tmux.nix
   ];
 }

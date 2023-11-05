@@ -34,10 +34,11 @@ STATE="$HOME/.local/state/swww"
 WPDIR="$HOME/nix-config/home/cody/local/denali/images/wallpaper/"
 
 # Transition variables
-TRANSITION_TYPE="wipe"
-TRANSITION_POS="0.75,0.9"
-TRANSITION_STEP="180"
-TRANSITION_DURATION="0.5"
+export TRANSITION_TYPE="wipe"
+export TRANSITION_POS="0.75,0.9"
+export TRANSITION_STEP="180"
+export TRANSITION_DURATION="0.5"
+export TRANSITION_ANGLE="180"
 
 # Create a directory in .local to store wallpaper state
 setup() {
@@ -96,6 +97,7 @@ set_current() {
 		--transition-pos $TRANSITION_POS \
 		--transition-step $TRANSITION_STEP \
 		--transition-duration $TRANSITION_DURATION \
+		--transition-angle $TRANSITION_ANGLE \
 		"$STATE/current"
 }
 
@@ -106,6 +108,7 @@ set_temp() {
 		--transition-pos $TRANSITION_POS \
 		--transition-step $TRANSITION_STEP \
 		--transition-duration $TRANSITION_DURATION \
+		--transition-angle $TRANSITION_ANGLE \
 		"$STATE/temp"
 
 	# ln -sf "$STATE/temp" "$STATE/current"
@@ -120,6 +123,7 @@ set_file() {
 		--transition-pos $TRANSITION_POS \
 		--transition-step $TRANSITION_STEP \
 		--transition-duration $TRANSITION_DURATION \
+		--transition-angle $TRANSITION_ANGLE \
 		"$1"
 
 	ln -sf "$1" "$STATE/current"
@@ -137,6 +141,7 @@ set_dir() {
 		--transition-pos $TRANSITION_POS \
 		--transition-step $TRANSITION_STEP \
 		--transition-duration $TRANSITION_DURATION \
+		--transition-angle $TRANSITION_ANGLE \
 		"$1/$fpath"
 
 	ln -sf "$1/$fpath" "$STATE/current"
@@ -300,8 +305,32 @@ run() {
 	-h | --help | *) print_help ;;
 	esac
 
+	# Uncomment this line if using pywal
 	# Set terminal colors based on current image
-	# wal -i "$(wp_path)" -n
+	wal -i "$(wp_path)" -n
+
+	# Uncomment this line if using pywal
+	# Reload eww bar to load new colors
+	eww reload
+
+	# Uncomment this line if using pywal
+	# Reload eww bar to load new colors
+	# source "/home/cody/.zshrc"
+	
+	sleep 4
+
+	# Get a list of all running Zsh processes
+  zsh_pids=$(pgrep -l zsh | awk '{print $1}')
+
+  # Iterate through each Zsh process and execute the function
+  for pid in $zsh_pids; do
+    # Check if the process is still running
+    if ps -p "$pid" > /dev/null; then
+      # Execute the function within the Zsh process
+      zsh -c "source $HOME/.zshrc" -p "$pid"
+			echo "Sourced .zshrc for process $pid"
+    fi
+  done
 }
 
 # Call run function to run the script

@@ -1,1 +1,5 @@
-@use "./styles/bar";
+// Uncomment to use tnn theme
+// @use "./styles/tnn/bar";
+
+// Uncomment to use pywal generated theme
+@use "./styles/pywal/bar";

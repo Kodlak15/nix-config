@@ -34,10 +34,14 @@
       setopt PROMPT_SUBST
 
       # Set pywal generated terminal colors
-      # (cat ~/.cache/wal/sequences &)
+      (cat ~/.cache/wal/sequences &)
+
+      # Source the colors file
+      source $HOME/.cache/wal/colors-zsh.zsh
 
       # Prompt
-      PROMPT='%F{#7aa2f7} % %F{#c0caf5}%~%f %F{#bb9af7}$(__git_ps1 "(%s)")%f%F{#89ddff}󰄾 %f'
+      # PROMPT='%F{#7aa2f7} % %F{#c0caf5}%~%f %F{#bb9af7}$(__git_ps1 "(%s)")%f%F{#89ddff}󰄾 %f'
+      PROMPT='%F{$color11} % %F{#ffffff}%~%f %F{$color8}$(__git_ps1 "(%s)")%f%F{$color11}󰄾 %f'
     '';
     # -------------------------------------------------------
     # Zsh plugins

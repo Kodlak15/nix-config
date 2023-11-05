@@ -35,6 +35,7 @@
     imv
     slurp
     pywal
+    ydotool
 
     # Maybe add as dependency within nixvim instead
     vimPlugins.friendly-snippets
