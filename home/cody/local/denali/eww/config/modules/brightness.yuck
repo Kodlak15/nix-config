@@ -9,7 +9,7 @@
 		:class "brightness"
 		:space-evenly false
 		:spacing 10
-		(label :text "󰛨" :class "brightness-icon")
+		(label :text "󰛨 " :class "brightness-icon")
 		(scale
 			:class "slider"
 			:value get_brightness

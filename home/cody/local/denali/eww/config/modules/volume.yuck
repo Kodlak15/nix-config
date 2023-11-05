@@ -9,7 +9,7 @@
 		:class "volume"
 		:space-evenly false
 		:spacing 10
-		(label :text "" :class "volume-icon")
+		(label :text " " :class "volume-icon")
 		(scale
 			:class "slider"
 			:value get_volume
