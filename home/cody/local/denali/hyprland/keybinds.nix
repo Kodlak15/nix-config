@@ -66,8 +66,12 @@
 
       # Adjust volume
       bind = , F1, exec, amixer -D default set Master 1+ toggle
-      bind = , F2, exec, wpctl set-volume 45 0.02-
-      bind = , F3, exec, wpctl set-volume 45 0.02+
+      bind = , F2, exec, wpctl set-volume 54 0.05-
+      bind = , F3, exec, wpctl set-volume 54 0.05+
+
+      # Adjust brightness
+      bind = , F6, exec, brightnessctl set 5%-
+      bind = , F7, exec, brightnessctl set 5%+
 
       # Eww
       bind = $mainMod, d, exec, $HOME/.config/eww/scripts/dashboard.sh -t $HOME/.config/eww/bars/default/
