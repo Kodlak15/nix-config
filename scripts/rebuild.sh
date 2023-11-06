@@ -18,11 +18,16 @@ rebuild_nix() {
   nixos-rebuild switch --flake ".#$flake" --impure
 }
 
+create_config_symlinks() {
+	ln -sfn "$HOME/nix-config/config/wal/" "$HOME/.config/"
+}
+
 rebuild_home() {
 	if [[ -n $(pgrep -x ".eww-wrapped") ]]; then
 	  killall ".eww-wrapped"
 	fi
   home-manager switch --flake ".#cody@$flake" --impure
+	create_config_symlinks
 	eww open bar
 }
 

@@ -31,14 +31,19 @@
     playerctl
     pavucontrol
     acpi
-    grim 
     imv
-    slurp
-    pywal
     ydotool
     brightnessctl
 
-    # Maybe add as dependency within nixvim instead
+    # Screenshots
+    grim 
+    slurp
+
+    # Pywal
+    pywal
+    python311Packages.colorthief
+
+    # Neovim/Vim plugins
     vimPlugins.friendly-snippets
   ];
 }
