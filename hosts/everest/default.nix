@@ -156,12 +156,31 @@
   hardware.pulseaudio.enable = true;
 
   # -------------------------------------------------------
+  # Virtualisation
+  # -------------------------------------------------------
+  virtualisation = {
+    docker.enable = true;
+    libvirtd.enable = true;
+  };
+
+  programs.dconf = {
+    enable = true;
+  };
+
+  # -------------------------------------------------------
   # User account
   # -------------------------------------------------------
+  # users.users.cody = {
+  #   initialPassword = "towerponyforestjeep";
+  #   isNormalUser = true;
+  #   extraGroups = ["wheel" "video" "input" "tty"];
+  #   openssh.authorizedKeys.keys = [];
+  # };
+
   users.users.cody = {
     initialPassword = "towerponyforestjeep";
     isNormalUser = true;
-    extraGroups = ["wheel" "video" "input" "tty"];
+    extraGroups = ["wheel" "audio" "video" "input" "docker" "libvirtd"];
     openssh.authorizedKeys.keys = [];
   };
 

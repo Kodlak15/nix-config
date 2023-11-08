@@ -31,7 +31,8 @@ STATE="$HOME/.local/state/swww"
 #     | - pets2.jpg
 #     | - pets3.jpg
 # | - ...
-WPDIR="$HOME/nix-config/home/cody/local/denali/images/wallpaper/"
+# WPDIR="$HOME/nix-config/home/cody/local/denali/images/wallpaper/"
+WPDIR="$HOME/nix-config/home/cody/local/$(hostname)/images/wallpaper/"
 
 # Transition variables
 export TRANSITION_TYPE="wipe"
