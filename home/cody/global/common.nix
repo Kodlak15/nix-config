@@ -35,6 +35,9 @@
     ydotool
     brightnessctl
 
+    # Yubikey
+    yubikey-personalization
+
     # Screenshots
     grim 
     slurp

@@ -5,9 +5,6 @@
 }: {
   programs.zsh = {
     enable = true;
-    # -------------------------------------------------------
-    # Zsh config (equivalent to .zshrc)
-    # -------------------------------------------------------
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
@@ -21,6 +18,26 @@
       alacritty = "nvidia-offload alacritty";
       screenshots = "$HOME/nix-config/scripts/screenshot.sh";
     };
+    plugins = [
+      {
+        name = "zsh-autosuggestions";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-autosuggestions";
+          rev = "v0.7.0";
+          sha256 = "KLUYpUu4DHRumQZ3w59m9aTW6TBKMCXl2UcKi4uMd7w=";
+        };
+      }
+      {
+        name = "zsh-syntax-highlighting";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-syntax-highlighting";
+          rev = "0.7.1";
+          sha256 = "gOG0NLlaJfotJfs+SUhGgLTNOnGLjoqnUp54V9aFJg8=";
+        };
+      }
+    ];
     initExtra = ''
       # Edit PATH
       export PATH="$PATH:$HOME/nix-config/scripts/"
@@ -43,30 +60,15 @@
       # PROMPT='%F{#7aa2f7} % %F{#c0caf5}%~%f %F{#bb9af7}$(__git_ps1 "(%s)")%f%F{#89ddff}󰄾 %f'
       PROMPT='%F{$color11} % %F{#ffffff}%~%f %F{$color8}$(__git_ps1 "(%s)")%f%F{$color11}󰄾 %f'
     '';
-    # -------------------------------------------------------
-    # Zsh plugins
-    # -------------------------------------------------------
-    plugins = [
-      {
-        # will source zsh-autosuggestions.plugin.zsh
-        name = "zsh-autosuggestions";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-autosuggestions";
-          rev = "v0.7.0";
-          sha256 = "KLUYpUu4DHRumQZ3w59m9aTW6TBKMCXl2UcKi4uMd7w=";
-        };
-      }
-      {
-        # will source zsh-syntax-highlighting.plugin.zsh
-        name = "zsh-syntax-highlighting";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-syntax-highlighting";
-          rev = "0.7.1";
-          sha256 = "gOG0NLlaJfotJfs+SUhGgLTNOnGLjoqnUp54V9aFJg8=";
-        };
-      }
-    ];
+    loginExtra = ''
+      if [ "$(tty)" = "/dev/tty1" ]; then
+        exec Hyprland &> /dev/null
+      fi
+    '';
+    profileExtra = ''
+      if [ "$(tty)" = "/dev/tty1" ]; then
+        exec Hyprland &> /dev/null
+      fi
+    '';
   };
 }

@@ -103,6 +103,7 @@
       };
       pulse.enable = true;
     };
+    getty.autologinUser = "cody";
   };
 
   security = {
