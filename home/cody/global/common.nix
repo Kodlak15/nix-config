@@ -1,39 +1,67 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    neofetch
+    # Browsers
     librewolf
     brave
     tor-browser-bundle-bin
-    discord
-    spotify
+
+    # System info
+    neofetch
+    nix-output-monitor
+    btop
+    lsof
+    nvtop
+    lm_sensors
+    pciutils
+    usbutils
+
+    # System tools
     eza
     ripgrep
     fzf
     tree
-    swww
     socat
-    nmap
     file
     which
     tree
-    gnupg
-    nix-output-monitor
-    glow
-    btop
-    lsof
-    lm_sensors
-    pciutils
-    usbutils
-    nvtop
-    docker-compose
-    virt-manager
+    p7zip
     jq
+    ydotool
+
+    # Wallpaper
+    swww
+
+    # Markdown viewer
+    glow
+
+    # Security
+    gnupg
+
+    # Network analysis
+    nmap
+
+    # Gaming
+    discord
+    wineWowPackages.waylandFull
+
+    # Containerisation and virtualisation
+    virt-manager
+    docker-compose
+    
+    # View images
+    imv
+
+    # Music and sound
+    spotify
     playerctl
     pavucontrol
+
+    # Power and brightness
     acpi
-    imv
-    ydotool
     brightnessctl
+
+    # File expolorer
+    xfce.thunar
 
     # Yubikey
     yubikey-personalization

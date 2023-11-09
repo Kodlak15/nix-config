@@ -7,5 +7,6 @@
     ./alacritty.nix
     ./zsh.nix
     ./virtualization.nix
+    ./gtk.nix
   ];
 }

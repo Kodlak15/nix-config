@@ -18,6 +18,11 @@
         enable = true;
         style = "night";
       };
+      catppuccin = {
+        enable = false;
+        flavour = "mocha";
+        terminalColors = true;
+      };
     };
     viAlias = true;
     vimAlias = true;

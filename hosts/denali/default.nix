@@ -158,7 +158,6 @@
     gh
     gnupg
     pass
-    wineWowPackages.wayland
     nix-prefetch-git
     home-manager
     gnumake
