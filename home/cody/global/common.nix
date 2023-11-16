@@ -5,6 +5,8 @@
     brave
     tor-browser-bundle-bin
 
+    # Dev
+
     # System info
     neofetch
     nix-output-monitor
@@ -42,6 +44,7 @@
 
     # Gaming
     discord
+    winetricks
     wineWowPackages.waylandFull
 
     # Containerisation and virtualisation

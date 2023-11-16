@@ -133,6 +133,21 @@
         "type": "github"
       }
     },
+    "flake-utils_4": {
+      "locked": {
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "gitignore": {
       "inputs": {
         "nixpkgs": [
@@ -147,6 +162,27 @@
         "owner": "hercules-ci",
         "repo": "gitignore.nix",
         "rev": "a20de23b925fd8264fd7fad6454652e142fd7f73",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "type": "github"
+      }
+    },
+    "gitignore_2": {
+      "inputs": {
+        "nixpkgs": [
+          "templ",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1694102001,
+        "narHash": "sha256-vky6VPK1n1od6vXbqzOXnekrQpTL4hbPAwUhT5J9c9E=",
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "rev": "9e21c80adf67ebcb077d75bd5e7d724d21eeafd6",
         "type": "github"
       },
       "original": {
@@ -270,6 +306,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1694422566,
+        "narHash": "sha256-lHJ+A9esOz9vln/3CJG23FV6Wd2OoOFbDeEs4cMGMqc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3a2786eea085f040a66ecde1bc3ddc7099f6dbeb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "beautysh": "beautysh",
@@ -352,7 +404,8 @@
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
-        "rust-overlay": "rust-overlay"
+        "rust-overlay": "rust-overlay",
+        "templ": "templ"
       }
     },
     "rust-overlay": {
@@ -436,6 +489,26 @@
         "type": "github"
       }
     },
+    "templ": {
+      "inputs": {
+        "gitignore": "gitignore_2",
+        "nixpkgs": "nixpkgs_3",
+        "xc": "xc"
+      },
+      "locked": {
+        "lastModified": 1699955095,
+        "narHash": "sha256-TF/fBWaezwvA3/k3kF7Z3qBgxUeU6tw7j6nd3JCsz1o=",
+        "owner": "a-h",
+        "repo": "templ",
+        "rev": "8d2651a8fa1750c8ade17f0e68bd31df9c4013dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "a-h",
+        "repo": "templ",
+        "type": "github"
+      }
+    },
     "utils": {
       "locked": {
         "lastModified": 1678901627,
@@ -468,6 +541,28 @@
         "repo": "wlroots",
         "rev": "47bf87ade2bd32395615a385ebde1fefbcdf79a2",
         "type": "gitlab"
+      }
+    },
+    "xc": {
+      "inputs": {
+        "flake-utils": "flake-utils_4",
+        "nixpkgs": [
+          "templ",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1696495449,
+        "narHash": "sha256-dthZiJ2FX/eIC0l1mdfefJZXDTVLfwp7L7Arq5rsCWA=",
+        "owner": "joerdav",
+        "repo": "xc",
+        "rev": "c8baab14d679fb276f11c576607010283be21220",
+        "type": "github"
+      },
+      "original": {
+        "owner": "joerdav",
+        "repo": "xc",
+        "type": "github"
       }
     },
     "xdph": {

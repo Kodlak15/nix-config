@@ -48,7 +48,6 @@
           linter = "stylelint";
         };
         dockerfile = {
-          linter = "alex";
         };
         go = {
           formatter = "gofmt";
@@ -56,11 +55,9 @@
         };
         haskell = {
           formatter = "fourmolu";
-          linter = "alex";
         };
         html = {
           formatter = "prettier";
-          linter = "alex";
         };
         javascript = {
           formatter = "prettier";
@@ -68,14 +65,12 @@
         };
         json = {
           formatter = "prettier";
-          linter = "alex";
         };
         lua = {
           formatter = "stylua";
           linter = "luacheck";
         };
         make = {
-          linter = "alex";
         };
         markdown = {
           formatter = "cbfmt";
@@ -95,7 +90,6 @@
         };
         rust = {
           formatter = "rustfmt";
-          linter = "alex";
         };
         scss = {
           formatter = "prettier";
@@ -107,11 +101,9 @@
         };
         sql = {
           formatter = "sql-formatter";
-          linter = "alex";
         };
         toml = {
           formatter = "taplo";
-          linter = "alex";
         };
         typescript = {
           formatter = "prettier";
@@ -119,9 +111,20 @@
         };
         yaml = {
           formatter = "yq";
-          linter = "alex";
         };
       };
     };
   };
+  programs.nixvim.extraConfigLua = ''
+    local nvim_lsp = require('lspconfig')
+    local servers = { 'templ' }
+    for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup {
+      on_attach = on_attach,
+      flags = {
+        debounce_text_changes = 150,
+      },
+    }
+    end
+  '';
 }

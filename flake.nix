@@ -26,6 +26,8 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    templ.url = "github:a-h/templ";
   };
 
   outputs = {
@@ -46,6 +48,7 @@
         inherit system;
         config.allowUnfree = true;
       });
+    templ = system: inputs.templ.${system}.templ;
   in {
     inherit lib;
     nixosModules = import ./modules/nixos;
