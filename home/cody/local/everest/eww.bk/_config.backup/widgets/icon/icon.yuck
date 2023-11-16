@@ -1,9 +1,0 @@
-(defwidget icon [action image ?class]
-  (button
-    :class "${class}"
-    :onclick "${action}"
-    :style "background: url('${image}'); background-repeat: no-repeat;"
-    :halign "center"
-    :valign "center"
-  )
-)
