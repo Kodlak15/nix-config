@@ -4,8 +4,6 @@
 (include "./modules/datetime.yuck")
 (include "./modules/battery.yuck")
 (include "./modules/systray.yuck")
-(include "./modules/volume.yuck")
-(include "./modules/brightness.yuck")
 
 ;; Include windows
 (include "./windows/bar.yuck")
