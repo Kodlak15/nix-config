@@ -62,6 +62,7 @@
     # Power and brightness
     acpi
     brightnessctl
+    linuxKernel.packages.linux_zen.ddcci-driver
 
     # File expolorer
     xfce.thunar

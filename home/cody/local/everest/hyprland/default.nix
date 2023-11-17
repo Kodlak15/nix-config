@@ -4,11 +4,11 @@
     ./environment.nix
     ./windowRules.nix
     ./windowSettings.nix
-    ./startup.nix
     ./monitors.nix
     ./startup.nix
     ./animations.nix
     ./colors.nix
+    ./startup.nix
   ];
 
   wayland.windowManager.hyprland = {
