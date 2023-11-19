@@ -3,22 +3,22 @@
 .dashboard {
 	font-family: Fira Code Nerd Font;
 	background: c.$color0;
-	border: 8px solid c.$color11;
+	border: 8px solid c.$color8;
 
 	.header {
 		font-weight: bold;
-	  border-bottom: 8px solid c.$color11;
+	  border-bottom: 8px solid c.$color8;
 		padding: 12px;
 
 		label {
 			font-size: 48px;
-			color: c.$color11;
+			color: c.$color8;
 		}
 	}
 
 	.grid {
 		.grid-row {
-	    border-bottom: 8px solid c.$color11;
+	    border-bottom: 8px solid c.$color8;
 
 			&.no-border-bottom {
 				border-bottom: none;
@@ -27,8 +27,9 @@
 	}
 
 	.sysinfo {
-		font-size: 48px;
-		color: c.$color11;
+		font-size: 24px;
+		color: c.$color8;
+		// border-right: 8px solid c.$color4;
 
 		.battery {
 
@@ -41,28 +42,67 @@
 			}
 		}
 
-		.cpu-usage {
-			scale {
-				min-width: 128px;
-				min-height: 64px;
-			}
+		.cpu {
+			// border: 2px solid yellow;
+			padding: 24px 0px 0px 24px;
 
-			trough {
-				background: #ffffff;
-				border: none;
-				border-radius: 20px;
-				min-height: 4px;
-			}
+		  .cpu-usage {
+		  	scale {
+		  		min-width: 128px;
+		  		min-height: 64px;
+		  	}
 
-			slider {
-				background-image: none;
-				box-shadow: none;
-				text-shadow: none;
-			}
+		  	trough {
+		  		background: #ffffff;
+		  		border: none;
+		  		// border-radius: 20px;
+		  		min-height: 12px;
+		  	}
 
-			highlight {
-				background: c.$color11;
-			}
+		  	slider {
+		  		background-image: none;
+		  		box-shadow: none;
+		  		text-shadow: none;
+		  	}
+
+		  	highlight {
+		  		background: c.$color11;
+		  	}
+		  }
 		}
+
+		.gpu {
+			// border: 2px solid yellow;
+			// padding: 24px 0px 0px 24px;
+			padding: 24px;
+
+		  .gpu-usage {
+		  	scale {
+		  		min-width: 128px;
+		  		min-height: 64px;
+		  	}
+
+		  	trough {
+		  		background: #ffffff;
+		  		border: none;
+		  		// border-radius: 20px;
+		  		min-height: 12px;
+		  	}
+
+		  	slider {
+		  		background-image: none;
+		  		box-shadow: none;
+		  		text-shadow: none;
+		  	}
+
+		  	highlight {
+		  		background: c.$color11;
+		  	}
+		  }
+		}
+	}
+
+	.test {
+		border-left: 8px solid c.$color4;
 	}
 }

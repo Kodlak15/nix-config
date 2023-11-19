@@ -17,7 +17,17 @@ cpu_usage() {
 	echo "100 - $idle" | bc
 }
 
+gpu_temp() {
+	nvidia-smi | grep -A 4 "Temp" | tail -n 1 | awk -F ' ' '{print $3}' | awk -F 'C' '{print $1}'
+}
+
+gpu_usage() {
+	nvidia-smi | grep -A 4 "Temp" | tail -n 1 | awk -F ' ' '{print $5}' | awk -F 'W' '{print $1}'
+}
+
 case $1 in 
 	--core-temp) core_temp ;;
 	--cpu-usage) cpu_usage ;;
+	--gpu-temp) gpu_temp ;;
+	--gpu-usage) gpu_usage ;;
 esac
