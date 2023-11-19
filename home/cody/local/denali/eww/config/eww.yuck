@@ -1,3 +1,5 @@
+;; Set up for a 3456x2160 laptop screen
+
 ;; Include modules
 (include "./modules/window.yuck")
 (include "./modules/workspaces.yuck")
@@ -6,6 +8,8 @@
 (include "./modules/systray.yuck")
 (include "./modules/volume.yuck")
 (include "./modules/brightness.yuck")
+(include "./modules/hardware.yuck")
 
 ;; Include windows
 (include "./windows/bar.yuck")
+(include "./windows/dashboard.yuck")

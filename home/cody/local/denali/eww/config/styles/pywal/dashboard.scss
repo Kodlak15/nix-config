@@ -1,0 +1,68 @@
+@use "/home/cody/.cache/wal/colors" as c;
+
+.dashboard {
+	font-family: Fira Code Nerd Font;
+	background: c.$color0;
+	border: 8px solid c.$color11;
+
+	.header {
+		font-weight: bold;
+	  border-bottom: 8px solid c.$color11;
+		padding: 12px;
+
+		label {
+			font-size: 48px;
+			color: c.$color11;
+		}
+	}
+
+	.grid {
+		.grid-row {
+	    border-bottom: 8px solid c.$color11;
+
+			&.no-border-bottom {
+				border-bottom: none;
+			}
+		}
+	}
+
+	.sysinfo {
+		font-size: 48px;
+		color: c.$color11;
+
+		.battery {
+
+			&.charging {
+				color: #00ff00;
+			}
+
+			&.low {
+				color: #ff0000;
+			}
+		}
+
+		.cpu-usage {
+			scale {
+				min-width: 128px;
+				min-height: 64px;
+			}
+
+			trough {
+				background: #ffffff;
+				border: none;
+				border-radius: 20px;
+				min-height: 4px;
+			}
+
+			slider {
+				background-image: none;
+				box-shadow: none;
+				text-shadow: none;
+			}
+
+			highlight {
+				background: c.$color11;
+			}
+		}
+	}
+}

@@ -22,7 +22,6 @@
       bind = $mainMod, e, exec, /usr/bin/alacritty -e $SHELL -c 'nvim && exec $SHELL' & 2> ./logs/nvim
       bind = $mainMod $altMod, v, exec, virt-manager
       bind = $ctlR, m, exec, spotify
-      # bind = $ctlR, s, exec, grim -g "$(slurp)" $HOME/screenshots/$(date + '%s_grim.png') 2> $HOME/screenshots/error.log
       bind = $ctlR, s, exec, $HOME/nix-config/scripts/screenshot.sh
       bind = $ctlR $altMod, v, exec, pavucontrol
 
@@ -74,9 +73,21 @@
       bind = , F7, exec, brightnessctl set 5%+
 
       # Eww
-      bind = $mainMod, d, exec, $HOME/.config/eww/scripts/dashboard.sh -t $HOME/.config/eww/bars/default/
+      bind = $mainMod, d, exec, $HOME/.config/eww/scripts/window.sh --toggle dashboard
       bind = $altMod, b, exec, $HOME/.config/eww/scripts/dropdown.sh --battery
       bind = $altMod, c, exec, $HOME/.config/eww/scripts/dropdown.sh --calendar
+
+      # Close dashboard when switching workspaces
+      bind = $mainMod, 1, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
+      bind = $mainMod, 2, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
+      bind = $mainMod, 3, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
+      bind = $mainMod, 4, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
+      bind = $mainMod, 5, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
+      bind = $mainMod, 6, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
+      bind = $mainMod, 7, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
+      bind = $mainMod, 8, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
+      bind = $mainMod, 9, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
+      bind = $mainMod, 0, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
 
       # Change wallpaper
       bind = $mainMod $altMod, s, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/space

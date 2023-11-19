@@ -1,0 +1,34 @@
+(defpoll core-temp
+	:initial "0"
+	:interval "5s"
+	"./scripts/hardware.sh --core-temp"
+)
+
+(defpoll cpu-usage
+	:initial "0"
+	:interval "5s"
+	"./scripts/hardware.sh --cpu-usage"
+)
+
+(defwidget core-temp []
+  (box
+		(label :text "${core-temp}°C")
+	)
+)
+
+(defwidget cpu-usage []
+  (box
+		:class "cpu-usage"
+		:space-evenly false
+		:halign "center"
+		:spacing 10
+		(label :text "${cpu-usage}%")
+		(scale
+			:class "slider"
+			:value cpu-usage
+			:orientation "h"
+			:min 0
+			:max 101
+		)
+	)
+)

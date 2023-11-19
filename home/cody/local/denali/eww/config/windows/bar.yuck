@@ -2,12 +2,6 @@
 	(box
 		:class "bar-left"
 		:space-evenly false
-		;; (box 
-		;; 	:class "nix-snowflake"
-		;; 	:style "background-image: url('./images/nix-snowflake.svg');"
-		;; 	:width 32
-		;; 	:height 32
-		;; )
 		(workspaces)
 	)
 )
