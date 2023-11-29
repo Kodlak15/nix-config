@@ -90,40 +90,40 @@
         remap = false;
       };
     }
-    {
-      # Luasnip
-      mode = "i";
-      key = "<Tab>";
-      action = ''
-        function()
-          return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<Tab>"
-        end
-      '';
-      options = {
-        expr = true;
-        silent = true;
-      };
-    }
-    {
-      # Luasnip
-      mode = "s";
-      key = "<Tab>";
-      action = ''
-        function()
-          return require("luasnip").jump(1)
-        end
-      '';
-    }
-    {
-      # Luasnip
-      mode = ["i" "s"];
-      key = "<S-Tab>";
-      action = ''
-        function()
-          return require("luasnip").jump(-1)
-        end
-      '';
-    }
+    # {
+    #   # Luasnip
+    #   mode = "i";
+    #   key = "<Tab>";
+    #   action = ''
+    #     function()
+    #       return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<Tab>"
+    #     end
+    #   '';
+    #   options = {
+    #     expr = true;
+    #     silent = true;
+    #   };
+    # }
+    # {
+    #   # Luasnip
+    #   mode = "s";
+    #   key = "<Tab>";
+    #   action = ''
+    #     function()
+    #       return require("luasnip").jump(1)
+    #     end
+    #   '';
+    # }
+    # {
+    #   # Luasnip
+    #   mode = ["i" "s"];
+    #   key = "<S-Tab>";
+    #   action = ''
+    #     function()
+    #       return require("luasnip").jump(-1)
+    #     end
+    #   '';
+    # }
     {
       # Source init.lua
       mode = ["n"];

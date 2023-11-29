@@ -80,5 +80,8 @@
 
     # Neovim/Vim plugins
     vimPlugins.friendly-snippets
+
+    # Test webcam
+    ffmpeg_6-full
   ];
 }
