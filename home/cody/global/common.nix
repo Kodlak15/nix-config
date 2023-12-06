@@ -6,6 +6,10 @@
     tor-browser-bundle-bin
 
     # Dev
+    gdb
+
+    # Rerverse engineering
+    ghidra
 
     # System info
     neofetch
