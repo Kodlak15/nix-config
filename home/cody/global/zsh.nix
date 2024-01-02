@@ -15,6 +15,7 @@
       lsa = "eza -la";
       e = "nvim $(fzf)";
       o = "cd $(find * -type d | fzf)";
+      d = "$HOME/bin/develop.sh";
       alacritty = "nvidia-offload alacritty";
       screenshots = "$HOME/nix-config/scripts/screenshot.sh";
     };
@@ -41,6 +42,7 @@
     initExtra = ''
       # Edit PATH
       export PATH="$PATH:$HOME/nix-config/scripts/"
+      export PATH="$PATH:$HOME/bin/"
 
       # Git status info
       autoload -Uz vcs_info

@@ -17,8 +17,10 @@
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
       bind = $mainMod, F, fullscreen
-      bind = $mainMod, b, exec, librewolf
+      # bind = $mainMod, b, exec, librewolf
+      bind = $mainMod, b, exec, firefox 
       bind = $mainMod, t, exec, thunar
+      bind = $mainMod, o, exec, obs
       bind = $mainMod, e, exec, /usr/bin/alacritty -e $SHELL -c 'nvim && exec $SHELL' & 2> ./logs/nvim
       bind = $mainMod $altMod, v, exec, virt-manager
       bind = $ctlR, m, exec, spotify

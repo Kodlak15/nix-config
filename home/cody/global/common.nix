@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     # Browsers
+    firefox-devedition-unwrapped
     librewolf
     brave
     tor-browser-bundle-bin
@@ -55,13 +56,21 @@
     virt-manager
     docker-compose
     
-    # View images
+    # View and/or edit images
     imv
+    gimp
 
-    # Music and sound
+    # Paint
+    krita
+
+    # Media
     spotify
     playerctl
     pavucontrol
+    vlc
+
+    # Screen recording/streaming
+    obs-studio
 
     # Power and brightness
     acpi

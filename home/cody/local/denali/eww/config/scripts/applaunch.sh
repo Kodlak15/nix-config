@@ -4,6 +4,10 @@ librewolf() {
 	exec librewolf &
 }
 
+firefox() {
+	exec firefox &
+}
+
 spotify() {
 	exec spotify &
 }
@@ -20,10 +24,16 @@ discord() {
 	exec discord &
 }
 
+obs() {
+	exec obs &
+}
+
 case "$1" in
 	--librewolf) librewolf ;;
+	--firefox) firefox ;;
 	--spotify) spotify ;;
 	--steam) steam ;;
 	--discord) discord ;;
+	--obs) obs ;;
 	*) echo "Invalid command..."
 esac 

@@ -6,6 +6,14 @@
 	)
 )
 
+(defwidget firefox []
+	(button
+		:class "librewolf"
+		:onclick "./scripts/applaunch.sh --firefox"
+		""
+	)
+)
+
 (defwidget spotify []
 	(button
 		:class "spotify"
@@ -30,13 +38,32 @@
 	)
 )
 
+(defwidget discord []
+	(button
+		:class "discord"
+		:onclick "./scripts/applaunch.sh --discord"
+		"󰙯"
+	)
+)
+
+(defwidget obs []
+	(button
+		:class "obs"
+		:onclick "./scripts/applaunch.sh --obs"
+		(image :path "../images/obs.svg")
+		;; "󰙯"
+	)
+)
+
 (defwidget systray []
 	(box
 		:class "systray"
 		:valign "center"
-		(librewolf)
+		;; (librewolf)
+		(firefox)
 		(spotify)
 		(steam)
 		(discord)
+		;; (obs)
 	)
 )
