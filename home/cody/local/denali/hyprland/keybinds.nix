@@ -96,6 +96,7 @@
       bind = $mainMod $altMod, f, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/forest
       bind = $mainMod $altMod, o, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/ocean
       bind = $mainMod $altMod, m, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/mountains
+      bind = $mainMod $altMod, g, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/gaming
       bind = $mainMod $altMod, n, exec, $HOME/nix-config/scripts/wpswap.sh -n
       bind = $mainMod $altMod, p, exec, $HOME/nix-config/scripts/wpswap.sh -P
     '';

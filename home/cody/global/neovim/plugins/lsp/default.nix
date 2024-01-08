@@ -17,7 +17,12 @@
         hls.enable = true;
         intelephense.enable = true;
         jsonls.enable = true;
-        rust-analyzer.enable = true;
+        # rust-analyzer.enable = true;
+        rust-analyzer = {
+          enable = true;
+          installCargo = false;
+          installRustc = false;
+        };
         svelte.enable = true;
         tsserver.enable = true;
         yamlls.enable = true;

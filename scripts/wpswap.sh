@@ -320,18 +320,20 @@ run() {
 	
 	sleep 4
 
+	# TODO: would be nice to be able to get reload zsh config upon swap to update zsh prompt colors
+
 	# Get a list of all running Zsh processes
-  zsh_pids=$(pgrep -l zsh | awk '{print $1}')
+  # zsh_pids=$(pgrep -l zsh | awk '{print $1}')
 
   # Iterate through each Zsh process and execute the function
-  for pid in $zsh_pids; do
+  # for pid in $zsh_pids; do
     # Check if the process is still running
-    if ps -p "$pid" > /dev/null; then
+    # if ps -p "$pid" > /dev/null; then
       # Execute the function within the Zsh process
-      zsh -c "source $HOME/.zshrc" -p "$pid"
-			echo "Sourced .zshrc for process $pid"
-    fi
-  done
+      # zsh -c "source $HOME/.zshrc" -p "$pid"
+			# echo "Sourced .zshrc for process $pid"
+    # fi
+  # done
 }
 
 # Call run function to run the script

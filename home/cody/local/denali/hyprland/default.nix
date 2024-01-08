@@ -14,8 +14,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    enableNvidiaPatches = true;
-    systemdIntegration = true;
+    # enableNvidiaPatches = true;
+    # systemdIntegration = true;
+    systemd.enable = true;
     extraConfig = ''
 
       # Get rid of default wallpaper

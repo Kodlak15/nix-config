@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     # Browsers
-    firefox-devedition-unwrapped
+    # firefox-devedition-unwrapped
+    firefox-devedition
     librewolf
     brave
     tor-browser-bundle-bin
@@ -68,6 +69,7 @@
     playerctl
     pavucontrol
     vlc
+    ffmpeg
 
     # Screen recording/streaming
     obs-studio
@@ -93,8 +95,5 @@
 
     # Neovim/Vim plugins
     vimPlugins.friendly-snippets
-
-    # Test webcam
-    ffmpeg_6-full
   ];
 }
