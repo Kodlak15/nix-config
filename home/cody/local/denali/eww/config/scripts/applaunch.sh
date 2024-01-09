@@ -5,7 +5,7 @@ librewolf() {
 }
 
 firefox() {
-	exec firefox &
+	exec firefox-devedition &
 }
 
 spotify() {

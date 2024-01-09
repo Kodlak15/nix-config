@@ -1,16 +1,12 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     # Browsers
-    # firefox-devedition-unwrapped
-    firefox-devedition
     librewolf
     brave
     tor-browser-bundle-bin
 
-    # Dev
+    # Debuggin and Rerverse engineering
     gdb
-
-    # Rerverse engineering
     ghidra
 
     # System info

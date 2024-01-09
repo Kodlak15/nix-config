@@ -14,6 +14,7 @@
     ./noice
     ./notify
     ./packer
+    ./todo-comments
   ];
 
   programs.nixvim.plugins = {

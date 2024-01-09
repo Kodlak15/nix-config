@@ -8,5 +8,6 @@
     ./zsh.nix
     ./virtualization.nix
     ./gtk.nix
+    ./firefox.nix
   ];
 }
