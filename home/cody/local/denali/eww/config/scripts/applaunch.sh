@@ -28,6 +28,11 @@ obs() {
 	exec obs &
 }
 
+wireshark() {
+	WAYLAND_DISPLAY="$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY"
+	exec wireshark &
+}
+
 case "$1" in
 	--librewolf) librewolf ;;
 	--firefox) firefox ;;
@@ -35,5 +40,6 @@ case "$1" in
 	--steam) steam ;;
 	--discord) discord ;;
 	--obs) obs ;;
+	--wireshark) wireshark ;;
 	*) echo "Invalid command..."
 esac 

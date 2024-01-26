@@ -17,7 +17,7 @@
       o = "cd $(find * -type d | fzf)";
       d = "$HOME/bin/develop.sh";
       alacritty = "nvidia-offload alacritty";
-      screenshots = "$HOME/nix-config/scripts/screenshot.sh";
+      screenshot = "$HOME/nix-config/scripts/screenshot.sh";
     };
     plugins = [
       {

@@ -67,8 +67,8 @@
 
       # Adjust volume
       bind = , F1, exec, amixer -D default set Master 1+ toggle
-      bind = , F2, exec, wpctl set-volume 54 0.05-
-      bind = , F3, exec, wpctl set-volume 54 0.05+
+      bind = , F2, exec, wpctl set-volume 56 0.05-
+      bind = , F3, exec, wpctl set-volume 56 0.05+
 
       # Adjust brightness
       bind = , F6, exec, brightnessctl set 5%-

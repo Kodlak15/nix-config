@@ -4,12 +4,18 @@
     ./plugins
     ./keymaps.nix
     ./options.nix
+    ./autoCmd.nix
   ];
 
   programs.nixvim = {
     enable = true;
     globals = {
       mapleader = " ";
+    };
+    filetype = {
+      extension = {
+        templ = "templ";
+      };
     };
     extraPlugins = [ pkgs.vimPlugins.pywal-nvim ];
     # colorscheme = "pywal";

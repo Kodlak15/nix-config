@@ -4,12 +4,24 @@
       enable = true;
       servers = {
         lua-ls.enable = true;
-        html.enable = true;
+        html = {
+          enable = true;
+          filetypes = [
+            "html"
+            "templ"
+          ];
+        };
         cssls.enable = true;
         ccls.enable = true;
         clangd.enable = true;
         cmake.enable = true;
-        gopls.enable = true;
+        gopls = {
+          enable = true;
+          filetypes = [
+            "go"
+            "templ"
+          ];
+        };
         eslint.enable = true;
         nil_ls.enable = true;
         pylsp.enable = true;
@@ -17,7 +29,6 @@
         hls.enable = true;
         intelephense.enable = true;
         jsonls.enable = true;
-        # rust-analyzer.enable = true;
         rust-analyzer = {
           enable = true;
           installCargo = false;
@@ -27,6 +38,7 @@
         tsserver.enable = true;
         yamlls.enable = true;
         efm.enable = true;
+        templ.enable = true;
       };
     };
     efmls-configs = {
@@ -41,7 +53,7 @@
           linter = "cpplint";
         };
         cmake = {
-          formatter = "gersemi";
+          # formatter = "gersemi";
           linter = "cmake_lint";
         };
         cpp = {
@@ -107,6 +119,9 @@
         sql = {
           formatter = "sql-formatter";
         };
+        # templ = {
+        #   formatter = "templ";
+        # };
         toml = {
           formatter = "taplo";
         };
@@ -120,16 +135,16 @@
       };
     };
   };
-  programs.nixvim.extraConfigLua = ''
-    local nvim_lsp = require('lspconfig')
-    local servers = { 'templ' }
-    for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      },
-    }
-    end
-  '';
+  # programs.nixvim.extraConfigLua = ''
+  #   local nvim_lsp = require('lspconfig')
+  #   local servers = { 'templ' }
+  #   for _, lsp in ipairs(servers) do
+  #   nvim_lsp[lsp].setup {
+  #     on_attach = on_attach,
+  #     flags = {
+  #       debounce_text_changes = 150,
+  #     },
+  #   }
+  #   end
+  # '';
 }

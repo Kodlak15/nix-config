@@ -2,8 +2,10 @@
   wayland.windowManager.hyprland = {
     extraConfig = ''
       general {
-          gaps_in = 2.5
-          gaps_out = 5
+          # gaps_in = 2.5
+          # gaps_out = 5
+          gaps_in = 2
+          gaps_out = 4
           border_size = 2.5
           # col.active_border = rgba(89ddffff) rgba(89ddffff) 90deg
           col.active_border = $color11

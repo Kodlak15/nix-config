@@ -43,6 +43,10 @@
 
     # Network analysis
     nmap
+    wireshark
+
+    # Flipper Zero software
+    qflipper
 
     # Gaming
     discord
@@ -91,5 +95,6 @@
 
     # Neovim/Vim plugins
     vimPlugins.friendly-snippets
+    vimPlugins.nvim-treesitter-parsers.templ
   ];
 }

@@ -21,7 +21,7 @@
 		.workspaces {
 			.workspaces-container {
 				.workspace-id {
-				  padding-right: g.$spacing;
+					padding-right: g.$spacing;
 
 					&.occupied {
 						.circle-outer {
@@ -47,9 +47,9 @@
 						margin: 12px 2px;
 
 						.circle-inner {
-				      background: c.$color8;
-						  border-radius: 100px;
-						  padding: 8px;
+							background: c.$color8;
+							border-radius: 100px;
+							padding: 8px;
 						}
 					}
 				}
@@ -71,12 +71,12 @@
 			padding-right: 16px;
 
 			scale {
-			  min-width: 64px;
-			  min-height: 5px;
+				min-width: 64px;
+				min-height: 5px;
 			}
 
 			.brightness-icon {
-			  font-size: 24px;
+				font-size: 24px;
 			}
 
 			trough {
@@ -104,13 +104,13 @@
 			padding-right: 8px;
 
 			.volume-icon {
-			  font-size: 24px;
+				font-size: 24px;
 			}
 
 			scale {
 				all: unset;
-			  min-width: 64px;
-			  min-height: 5px;
+				min-width: 64px;
+				min-height: 5px;
 			}
 
 			trough {
@@ -130,12 +130,12 @@
 				background: c.$color11;
 			}
 		}
-		
+
 		.systray {
 			font-size: 24px;
-		  border: 2px solid c.$color0;
+			border: 2px solid c.$color0;
 
-			& > * {
+			&>* {
 				padding: 8px;
 				margin-right: 8px;
 			}

@@ -55,6 +55,14 @@
 	)
 )
 
+(defwidget wireshark []
+	(button
+		:class "wireshark"
+		:onclick "./scripts/applaunch.sh --wireshark"
+		"󱙳"
+	)
+)
+
 (defwidget systray []
 	(box
 		:class "systray"
@@ -65,5 +73,6 @@
 		(steam)
 		(discord)
 		;; (obs)
+		(wireshark)
 	)
 )

@@ -126,6 +126,7 @@
   networking = {
     hostName = "denali";
     networkmanager.enable = true;
+    firewall.enable = true;
   };
 
   time.timeZone = "US/Pacific";
@@ -147,7 +148,7 @@
   users.users.cody = {
     initialPassword = "towerponyforestjeep";
     isNormalUser = true;
-    extraGroups = ["wheel" "audio" "video" "input" "docker" "libvirtd"];
+    extraGroups = [ "wheel" "audio" "video" "input" "docker" "libvirtd" "wireshark" ];
     openssh.authorizedKeys.keys = [];
   };
 
