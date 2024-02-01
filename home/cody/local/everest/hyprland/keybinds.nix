@@ -17,7 +17,7 @@
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
       bind = $mainMod, F, fullscreen
-      bind = $mainMod, b, exec, librewolf
+      bind = $mainMod, b, exec, firefox-devedition
       bind = $mainMod, t, exec, thunar
       bind = $mainMod, e, exec, /usr/bin/alacritty -e $SHELL -c 'nvim && exec $SHELL' & 2> ./logs/nvim
       bind = $mainMod $altMod, v, exec, virt-manager
@@ -77,12 +77,16 @@
       bind = $mainMod, d, exec, $HOME/.config/eww/scripts/dashboard.sh -t $HOME/.config/eww/bars/default/
       bind = $altMod, b, exec, $HOME/.config/eww/scripts/dropdown.sh --battery
       bind = $altMod, c, exec, $HOME/.config/eww/scripts/dropdown.sh --calendar
+      bind = $mainMod, x, exec, $HOME/.config/eww/scripts/window.sh --toggle bar
+      # bind = $mainMod, x, exec, $HOME/.config/eww/scripts/window.sh bar
 
       # Change wallpaper
-      bind = $mainMod $altMod, s, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/space
-      bind = $mainMod $altMod, f, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/forest
-      bind = $mainMod $altMod, o, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/ocean
-      bind = $mainMod $altMod, m, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/mountains
+      # bind = $mainMod $altMod, s, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/space
+      # bind = $mainMod $altMod, f, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/forest
+      # bind = $mainMod $altMod, o, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/ocean
+      # bind = $mainMod $altMod, m, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/denali/images/wallpaper/mountains
+
+      bind = $mainMod $altMod, d, exec, $HOME/nix-config/scripts/wpswap.sh -D $HOME/nix-config/home/cody/local/everest/images/wallpaper/digital
       bind = $mainMod $altMod, n, exec, $HOME/nix-config/scripts/wpswap.sh -n
       bind = $mainMod $altMod, p, exec, $HOME/nix-config/scripts/wpswap.sh -P
     '';
