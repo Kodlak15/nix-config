@@ -31,6 +31,7 @@
     p7zip
     jq
     ydotool
+    inotify-tools
 
     # Wallpaper
     swww
