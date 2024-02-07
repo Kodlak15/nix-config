@@ -9,5 +9,6 @@
     ./virtualization.nix
     ./gtk.nix
     ./firefox.nix
+    ./zellij.nix
   ];
 }

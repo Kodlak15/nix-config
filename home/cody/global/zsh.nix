@@ -16,6 +16,7 @@
       e = "nvim $(fzf)";
       o = "cd $(find * -type d | fzf)";
       d = "$HOME/bin/develop.sh";
+      z = "zellij";
       alacritty = "nvidia-offload alacritty";
       screenshot = "$HOME/nix-config/scripts/screenshot.sh";
     };
@@ -54,6 +55,9 @@
 
       # Set pywal generated terminal colors
       (cat ~/.cache/wal/sequences &)
+
+      # Add pywal support for tty
+      source ~/.cache/wal/colors-tty.sh
 
       # Source the colors file
       source $HOME/.cache/wal/colors-zsh.zsh

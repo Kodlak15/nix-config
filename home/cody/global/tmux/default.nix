@@ -2,7 +2,7 @@
   imports = [ ./colors.nix ];
 
   programs.tmux = {
-    enable = true;
+    enable = false;
     extraConfig = ''
       # source-file $HOME/.cache/wal/colors-tmux.conf
 
@@ -16,10 +16,10 @@
       # Disable drag action in normal mode if your pointer causes problems with
       unbind -n MouseDrag1Pane
       # Set the colors
-      set-option -g status-style fg="#ffffff",bg="#000000"
-      set-window-option -g window-status-current-style bg="#000000"
-      set-option -g pane-border-style fg="#000000"
-      set-option -g pane-active-border-style fg="#000000"
+      # set-option -g status-style fg="#ffffff",bg="#000000"
+      # set-window-option -g window-status-current-style bg="#000000"
+      # set-option -g pane-border-style fg="#000000"
+      # set-option -g pane-active-border-style fg="#000000"
     '';
   };
 }

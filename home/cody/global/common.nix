@@ -84,6 +84,9 @@
     # File expolorer
     xfce.thunar
 
+    # Terminal multiplexer
+    # zellij
+
     # Yubikey
     yubikey-personalization
 

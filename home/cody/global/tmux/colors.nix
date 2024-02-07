@@ -1,6 +1,6 @@
 {
   programs.tmux = {
-    enable = true;
+    # enable = true;
     extraConfig = ''
       source-file $HOME/.cache/wal/colors-tmux.conf
     '';

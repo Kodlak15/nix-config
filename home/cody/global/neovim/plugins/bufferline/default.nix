@@ -3,6 +3,6 @@
   ];
 
   programs.nixvim.plugins.bufferline = {
-    enable = true;
+    enable = false;
   };
 }
