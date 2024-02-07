@@ -18,10 +18,10 @@
       };
     };
     extraPlugins = [ pkgs.vimPlugins.pywal-nvim ];
-    # colorscheme = "pywal";
+    colorscheme = "pywal";
     colorschemes = {
       tokyonight = {
-        enable = true;
+        enable = false;
         style = "night";
       };
       catppuccin = {

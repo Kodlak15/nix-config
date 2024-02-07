@@ -34,7 +34,7 @@
 )
 
 (defwindow bar
-	:monitor 0
+	:monitor "AW2725DF"
 	:geometry (
 		geometry
 		:x "0%"

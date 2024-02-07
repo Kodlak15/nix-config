@@ -17,7 +17,8 @@ steam() {
 }
 
 discord() {
-	exec discord &
+	# exec discord &
+	exec webcord &
 }
 
 case "$1" in
