@@ -41,6 +41,9 @@
       }
     ];
     initExtra = ''
+      export TERM=xterm-256color
+      export ZELLIJ_AUTO_START=false
+
       # Edit PATH
       export PATH="$PATH:$HOME/nix-config/scripts/"
       export PATH="$PATH:$HOME/bin/"

@@ -2,7 +2,7 @@
   imports = [ ./colors.nix ];
 
   programs.tmux = {
-    enable = false;
+    enable = true;
     extraConfig = ''
       # source-file $HOME/.cache/wal/colors-tmux.conf
 
