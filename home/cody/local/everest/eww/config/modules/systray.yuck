@@ -6,6 +6,14 @@
 	)
 )
 
+(defwidget firefox[]
+	(button
+		:class "firefox"
+		:onclick "./scripts/applaunch.sh --firefox"
+		""
+	)
+)
+
 (defwidget spotify []
 	(button
 		:class "spotify"
@@ -30,13 +38,22 @@
 	)
 )
 
+(defwidget gimp []
+	(button
+		:class "gimp"
+		:onclick "./scripts/applaunch.sh --gimp"
+		""
+	)
+)
+
 (defwidget systray []
 	(box
 		:class "systray"
 		:valign "center"
-		(librewolf)
+		(firefox)
 		(spotify)
 		(steam)
 		(discord)
+		(gimp)
 	)
 )
