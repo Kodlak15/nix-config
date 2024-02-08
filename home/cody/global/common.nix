@@ -36,7 +36,7 @@
     # Wallpaper
     swww
 
-    # Markdown viewer
+    # Markdown viewer/editor
     glow
 
     # Security
