@@ -2,6 +2,7 @@
   imports = [
     ./neovim
     ./tmux
+    ./sops
     ./common.nix
     ./git.nix
     ./alacritty.nix

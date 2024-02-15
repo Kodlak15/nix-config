@@ -28,6 +28,8 @@
     };
 
     templ.url = "github:a-h/templ";
+
+		sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {
@@ -37,6 +39,7 @@
     hyprland,
     nixvim,
     eww,
+		sops-nix,
     ...
   } @ inputs: let
     inherit (self) outputs;

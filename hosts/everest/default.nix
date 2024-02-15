@@ -110,6 +110,9 @@
 
   environment = {
     shells = with pkgs; [zsh];
+    variables = {
+      EDITOR = "nvim";
+    };
   };
 
   fonts.packages = with pkgs; [

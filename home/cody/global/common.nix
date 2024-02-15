@@ -64,7 +64,7 @@
     gimp
 
     # Paint
-    krita
+    mypaint
 
     # Media
     spotify
