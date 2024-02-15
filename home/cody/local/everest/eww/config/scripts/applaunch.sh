@@ -28,6 +28,10 @@ gimp() {
 	exec gimp &
 }
 
+pinta() {
+	exec pinta &
+}
+
 case "$1" in
 	--librewolf) librewolf ;;
 	--firefox) firefox ;;
@@ -35,5 +39,6 @@ case "$1" in
 	--steam) steam ;;
 	--discord) discord ;;
 	--gimp) gimp ;;
+	--pinta) pinta ;;
 	*) echo "Invalid command..."
 esac 

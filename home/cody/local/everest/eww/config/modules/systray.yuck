@@ -46,6 +46,14 @@
 	)
 )
 
+(defwidget pinta []
+	(button
+		:class "pinta"
+		:onclick "./scripts/applaunch.sh --pinta"
+		""
+	)
+)
+
 (defwidget systray []
 	(box
 		:class "systray"
@@ -55,5 +63,6 @@
 		(steam)
 		(discord)
 		(gimp)
+		(pinta)
 	)
 )
