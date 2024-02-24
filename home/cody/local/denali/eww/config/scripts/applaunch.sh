@@ -28,6 +28,14 @@ obs() {
 	exec obs &
 }
 
+gimp() {
+	exec gimp &
+}
+
+logseq() {
+	exec logseq &
+}
+
 wireshark() {
 	WAYLAND_DISPLAY="$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY"
 	exec wireshark &
@@ -41,5 +49,7 @@ case "$1" in
 	--discord) discord ;;
 	--obs) obs ;;
 	--wireshark) wireshark ;;
+	--gimp) gimp ;;
+	--logseq) logseq ;;
 	*) echo "Invalid command..."
 esac 

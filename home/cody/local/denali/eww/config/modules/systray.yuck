@@ -55,6 +55,22 @@
 	)
 )
 
+(defwidget gimp []
+	(button
+		:class "gimp"
+		:onclick "./scripts/applaunch.sh --gimp"
+		""
+	)
+)
+
+(defwidget logseq []
+	(button
+		:class "gimp"
+		:onclick "./scripts/applaunch.sh --logseq"
+		""
+	)
+)
+
 (defwidget wireshark []
 	(button
 		:class "wireshark"
@@ -73,6 +89,8 @@
 		(steam)
 		(discord)
 		;; (obs)
-		(wireshark)
+		;; (wireshark)
+		(gimp)
+		(logseq)
 	)
 )

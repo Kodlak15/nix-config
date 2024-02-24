@@ -78,6 +78,7 @@
       bind = $mainMod, d, exec, $HOME/.config/eww/scripts/window.sh --toggle dashboard
       bind = $altMod, b, exec, $HOME/.config/eww/scripts/dropdown.sh --battery
       bind = $altMod, c, exec, $HOME/.config/eww/scripts/dropdown.sh --calendar
+      bind = $mainMod, x, exec, $HOME/.config/eww/scripts/window.sh --toggle bar
 
       # Close dashboard when switching workspaces
       bind = $mainMod, 1, exec, $HOME/.config/eww/scripts/window.sh --close dashboard
