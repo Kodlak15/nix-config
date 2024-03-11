@@ -33,6 +33,9 @@
     ydotool
     inotify-tools
 
+    # Dev tools
+    trunk
+
     # Markdown editor
     logseq
 
@@ -53,7 +56,6 @@
     qflipper
 
     # Gaming
-    # discord
     webcord # discord alternative
     winetricks
     wineWowPackages.waylandFull

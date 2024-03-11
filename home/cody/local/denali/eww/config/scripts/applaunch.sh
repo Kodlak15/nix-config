@@ -21,7 +21,7 @@ steam() {
 }
 
 discord() {
-	exec discord &
+	exec webcord &
 }
 
 obs() {
