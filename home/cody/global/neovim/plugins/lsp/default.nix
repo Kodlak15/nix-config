@@ -39,6 +39,23 @@
         yamlls.enable = true;
         efm.enable = true;
         templ.enable = true;
+        tailwindcss = {
+          enable = true;
+          filetypes = [
+            "html"
+            "css"
+            "scss"
+            # "js"
+            # "ts"
+            "javascript"
+            "typescript"
+            "svelte"
+            "rust"
+          ];
+          extraOptions = {
+            init_options.userLanguages.rust = "html";
+          };
+        };
       };
     };
     efmls-configs = {

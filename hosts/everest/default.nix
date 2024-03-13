@@ -122,6 +122,9 @@
   networking = {
     hostName = "denali";
     networkmanager.enable = true;
+    firewall = {
+      enable = true;
+    };
   };
 
   time.timeZone = "US/Pacific";
