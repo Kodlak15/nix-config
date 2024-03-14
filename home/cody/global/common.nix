@@ -32,6 +32,7 @@
     jq
     ydotool
     inotify-tools
+    unzip
 
     # Dev tools
     trunk
@@ -104,7 +105,7 @@
     python311Packages.colorthief
 
     # Neovim/Vim plugins
-    vim
+    neovim
     vimPlugins.friendly-snippets
     vimPlugins.nvim-treesitter-parsers.templ
   ];
