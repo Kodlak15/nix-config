@@ -104,6 +104,7 @@
     python311Packages.colorthief
 
     # Neovim/Vim plugins
+    vim
     vimPlugins.friendly-snippets
     vimPlugins.nvim-treesitter-parsers.templ
   ];

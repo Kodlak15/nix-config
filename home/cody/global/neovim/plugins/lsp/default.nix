@@ -6,9 +6,25 @@
         lua-ls.enable = true;
         html = {
           enable = true;
+          # filetypes = [
+          #   "html"
+          #   "templ"
+          # ];
+        };
+				htmx = {
+					enable = true;
+					filetypes = [
+						"html"
+						"templ"
+						"rust"
+					];
+				};
+        emmet_ls = {
+          enable = true;
           filetypes = [
             "html"
             "templ"
+            "rust"
           ];
         };
         cssls.enable = true;
@@ -45,12 +61,12 @@
             "html"
             "css"
             "scss"
-            # "js"
-            # "ts"
             "javascript"
             "typescript"
             "svelte"
             "rust"
+						"templ"
+						"go"
           ];
           extraOptions = {
             init_options.userLanguages.rust = "html";
@@ -104,8 +120,6 @@
           formatter = "stylua";
           linter = "luacheck";
         };
-        make = {
-        };
         markdown = {
           formatter = "cbfmt";
           linter = "markdownlint";
@@ -136,9 +150,6 @@
         sql = {
           formatter = "sql-formatter";
         };
-        # templ = {
-        #   formatter = "templ";
-        # };
         toml = {
           formatter = "taplo";
         };
@@ -152,16 +163,4 @@
       };
     };
   };
-  # programs.nixvim.extraConfigLua = ''
-  #   local nvim_lsp = require('lspconfig')
-  #   local servers = { 'templ' }
-  #   for _, lsp in ipairs(servers) do
-  #   nvim_lsp[lsp].setup {
-  #     on_attach = on_attach,
-  #     flags = {
-  #       debounce_text_changes = 150,
-  #     },
-  #   }
-  #   end
-  # '';
 }
