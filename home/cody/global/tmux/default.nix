@@ -1,5 +1,5 @@
 {
-  imports = [ ./colors.nix ];
+  imports = [./colors.nix];
 
   programs.tmux = {
     enable = true;

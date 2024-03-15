@@ -1,4 +1,3 @@
-{lib, ...}:
 {
   programs.nixvim.options = {
     ignorecase = true;
@@ -12,8 +11,8 @@
     smartindent = true;
     signcolumn = "yes";
     tabstop = 2;
+    softtabstop = 2;
     termguicolors = true;
-    # termguicolors = lib.mkForce false;
     timeoutlen = 300;
     undofile = true;
     undolevels = 10000;

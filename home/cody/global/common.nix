@@ -64,7 +64,7 @@
     # Containerisation and virtualisation
     virt-manager
     docker-compose
-    
+
     # View and/or edit images
     imv
     gimp
@@ -85,7 +85,7 @@
     # Power and brightness
     acpi
     brightnessctl
-    linuxKernel.packages.linux_zen.ddcci-driver
+    # linuxKernel.packages.linux_zen.ddcci-driver (need to fix for laptop brightness control, broke with update)
 
     # File expolorer
     xfce.thunar
@@ -97,7 +97,7 @@
     yubikey-personalization
 
     # Screenshots
-    grim 
+    grim
     slurp
 
     # Pywal

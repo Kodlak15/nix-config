@@ -11,14 +11,14 @@
           #   "templ"
           # ];
         };
-				htmx = {
-					enable = true;
-					filetypes = [
-						"html"
-						"templ"
-						"rust"
-					];
-				};
+        htmx = {
+          enable = true;
+          filetypes = [
+            "html"
+            "templ"
+            "rust"
+          ];
+        };
         emmet_ls = {
           enable = true;
           filetypes = [
@@ -65,8 +65,8 @@
             "typescript"
             "svelte"
             "rust"
-						"templ"
-						"go"
+            "templ"
+            "go"
           ];
           extraOptions = {
             init_options.userLanguages.rust = "html";

@@ -29,7 +29,7 @@
 
     templ.url = "github:a-h/templ";
 
-		sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {
@@ -39,7 +39,7 @@
     hyprland,
     nixvim,
     eww,
-		sops-nix,
+    sops-nix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -89,7 +89,8 @@
       "cody@denali" = lib.homeManagerConfiguration {
         modules = [./home/cody/denali.nix];
         pkgs = pkgsFor.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;}; };
+        extraSpecialArgs = {inherit inputs outputs;};
+      };
       # Test VM
       "cody@rainier" = lib.homeManagerConfiguration {
         modules = [./home/cody/rainier.nix];
