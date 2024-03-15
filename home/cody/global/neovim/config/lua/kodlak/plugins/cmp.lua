@@ -1,3 +1,4 @@
+-- Autocompletion and snippets
 return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",

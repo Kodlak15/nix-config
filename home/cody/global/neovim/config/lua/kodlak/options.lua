@@ -1,5 +1,6 @@
 local options = {
   ignorecase          = true,  
+  smartcase           = true,
   mouse 	            = "a",
   number              = true,
   nu 		              = true,
@@ -19,6 +20,7 @@ local options = {
   wrap                = false,
   hlsearch            = false,
   incsearch           = true,
+  clipboard           = "unnamedplus",
 }
 
 for k, v in pairs(options) do

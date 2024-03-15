@@ -1,6 +1,6 @@
 {
   imports = [
-    # ./neovim
+    ./neovim
     ./tmux
     ./sops
     ./common.nix
