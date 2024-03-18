@@ -26,7 +26,14 @@
             "rust"
           ];
         };
-        cssls.enable = true;
+        cssls = {
+          enable = true;
+          extraOptions = {
+            settings = {
+              css.lint.unknownAtRules = "ignore";
+            };
+          };
+        };
         ccls.enable = true;
         clangd.enable = true;
         cmake.enable = true;
